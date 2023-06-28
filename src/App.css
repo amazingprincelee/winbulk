@@ -1,0 +1,399 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('/src/images/orangeBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  background: url('/src/images/orangeBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  border: 2px red solid;
+
+}
+
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid orange;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  
+  
+  
+}
+
+
+.logo-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  margin-top: -4;
+  
+ 
+}
+
+.header {
+  width: 100%;
+  background-color: #ffa500;
+  background-image: url(./images/sling-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+  padding-top: 10px;
+  border: 2px solid #ffa500;
+  color: #fff;
+  box-sizing: border-box;
+  
+  
+
+}
+
+.header h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 2.5rem;
+  
+}
+
+/* the general style for the section heading (ecosysm, team, token info, roadmap) */
+H3 {
+
+  text-align: center;
+  margin: 20px !important;
+
+}
+
+
+.caculator-input, .caculator-output {
+  border: rgb(246, 255, 0) 2px solid;
+  height: 38px;
+  padding: 8px;
+  font-size: 1rem;
+  margin: 0;
+  background: #ffffff;
+  color: #3c3c3c;
+  border-radius: 5px;
+}
+
+
+
+
+/* start of roadmap stying */
+
+.roadmap {
+ 
+  margin: 10px;
+  padding: 20px;
+ border: 2px solid rgb(119, 78, 2);
+ border-radius: 10px;
+}
+
+.roadmap-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  
+  
+}
+
+
+.roadmap-item {
+  margin: 10px;
+  border: #096dd9 2px solid;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #ffcc00, #ff7f00);
+  color: #ffffff;
+}
+
+/* End of roadmap style */
+
+
+
+
+/* Begin the team styling */
+
+
+.team {
+  
+  border: 2px solid rgb(119, 78, 2);
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+
+.team-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  width: 65%;
+  text-align: center;
+  color: white;
+}
+
+.team-desc p {
+  width: 60%;
+}
+
+.team-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.lead-member {
+  background-image: linear-gradient(45deg, #a48401, #944b02);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+
+.member3-card {
+  background-image: linear-gradient(45deg, #cea503, #c26304);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+/* end of team members area styling */
+
+
+
+
+/* start token-info style-------------- */
+
+.token-info {
+  border: 2px solid rgb(119, 78, 2);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  
+}
+
+.token-content {
+  color: white;
+}
+
+.sales-info  {
+  font-size: 1rem !important;
+}
+
+
+.top-holder-table {
+  background-image: linear-gradient(45deg, #ffcc00, #ff7f00);
+  width: 100%; /* Set the width of the table */
+    table-layout: fixed; /* Prevent table from automatically adjusting column widths */
+    border-radius: 10px;
+    
+
+}
+
+.col-6 h1{
+  color:#ccc
+}
+
+.top-holder-table td, .top-holder-table th {
+    padding: 10px;
+}
+
+/* End token-info style-------------- */
+
+
+
+.primary-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(231, 165, 165, 0.5);
+  color: rgb(7, 7, 7);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+.primary-btn:hover {
+  border: 2px green solid;
+  color: rgb(255, 255, 255);
+}
+
+
+.whitepaper {
+  font-size: 2rem;
+  color: white;
+}
+
+/* just used for space place holder */
+
+
+.social-link{
+  color: white;
+  margin: 2px;
+}
+
+/* start winbuy styling area */
+
+.winbuy-container {
+  display: flex;
+  justify-content: center;
+}
+
+.winbuy-content {
+  width: 700px;
+  padding: 10px;
+}
+
+
+/* end winbuy styling area */
+
+
+/* Ecosystem and utility area */
+
+.ecosystem-container {
+ margin: 20px;
+ border-radius: 10px;
+ box-sizing: border-box;
+ flex-wrap: nowrap;
+}
+
+.util-column {
+  background-image: linear-gradient(45deg, #333333, #000000);
+  color:#fff;
+  border: 3px orange solid;
+  border-radius: 10px;
+  
+  
+
+}
+
+/* end of ecosystem styling */
+
+
+
+/* start header styling area */
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* this is the WINBULK title style on the Header section */
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+
+.motto {
+  margin: 0;
+  font-size: 10px;
+  color: #944b02;
+}
+
+.desc {
+  font-family: 'Montserrat', sans-serif;
+  width: 65%;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  .desc {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
+
+/* Media query for desktops */
+@media only screen and (min-width: 768px) {
+  .desc {
+    font-size: 1.8rem !important;
+  }
+}
+
+
+
+
+
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+  }
+
+  .header-image {
+    display: block;
+    margin-left: 50px; /* adjust margin as needed */
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 200px;
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .primary-btn:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .right-column {
+    display: none;
+  }
+
+  .header-image {
+    display: none;
+  }
+
+  
+}
