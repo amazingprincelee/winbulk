@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TokenDistribution from './TokenDistribution'
 
 function TokenInfo() {
-  const [hardCap, setHardCap] = useState("0 WIN");
+  const [hardCap, setHardCap] = useState("0 WBUK");
   const [topHolders, setTopHolders] = useState(0);
 
   return (
@@ -16,19 +16,19 @@ function TokenInfo() {
               <tbody>
                 <tr>
                   <td>TOKEN PRICE</td>
-                  <td>$0000001</td>
+                  <td>$ 0.00001</td>
+                </tr>
+                <tr>
+                  <td>AMOUNT RAISED</td>
+                  <td> {hardCap}</td>
                 </tr>
                 <tr>
                   <td>HARDCAP</td>
-                  <td>RAISED AMOUNT {hardCap}</td>
-                </tr>
-                <tr>
-                  <td>SOFTCAP</td>
-                  <td>RAISED AMOUNT {hardCap}</td>
+                  <td>500 BNB</td>
                 </tr>
                 <tr>
                   <td>TOP HOLDERS</td>
-                  <td>RAISED AMOUNT {topHolders}</td>
+                  <td>{topHolders}</td>
                 </tr>
                 <tr>
                   <td>MAX INVESTMENT</td>

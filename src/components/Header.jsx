@@ -30,7 +30,7 @@ function Header() {
 
             <p className="desc" style={{ fontSize: "1rem" }}>
               WinBulk introduces a groundbreaking token presale system, known as
-              WIN SALE, which sets a new standard in effectiveness and
+              WINBULK SALES, which sets a new standard in effectiveness and
               self-propulsion. incorporating a unique and lucrative pair lottery
               system that generates significant profits.
             </p>

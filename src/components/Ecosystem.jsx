@@ -7,7 +7,7 @@ function Ecosystem() {
       <h3>ECOSYSTEM</h3>
       <div class="row">
         <div class="col-md-3 util-column">
-          <h1>WIN SALE</h1>
+          <h1>WINBULK SALES</h1>
           <StatusBtn status="Under Development" />
 
           <p>
@@ -21,7 +21,7 @@ function Ecosystem() {
           <button>Launch App</button>
         </div>
         <div class="col-md-3 util-column">
-          <h1>WIN LOTTERY</h1>
+          <h1>WINBULK LOTTERY</h1>
           <StatusBtn status="Under Development" />
 
           <p>
@@ -35,7 +35,7 @@ function Ecosystem() {
           <button>Launch App</button>
         </div>
         <div class="col-md-3 util-column">
-          <h1>WIN STAKING</h1>
+          <h1>WINBULK STAKING</h1>
           <StatusBtn status="Under Development" />
 
           <p>
@@ -49,7 +49,7 @@ function Ecosystem() {
           <button>Launch App</button>
         </div>
         <div class="col-md-3 util-column">
-          <h1>WIN SWAP</h1>
+          <h1>WINBULK SWAP</h1>
           <StatusBtn status="Under Development" />
 
           <p>

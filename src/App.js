@@ -7,6 +7,8 @@ import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import TokenInfo from "./components/TokenInfo";
 import StakingPage from "./pages/StakingPage";
+import LotteryPage from "./pages/LotteryPage";
+import SwapPage from "./pages/SwapPage";
 import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
 
@@ -27,8 +29,14 @@ function App() {
             <TokenInfo />
           </div>
         </Route>
+        <Route path="/LotteryPage">
+          <LotteryPage />
+        </Route>
         <Route path="/StakingPage">
           <StakingPage />
+        </Route>
+        <Route path="/SwapPage">
+          <SwapPage />
         </Route>
       </Switch>
       <Footer />

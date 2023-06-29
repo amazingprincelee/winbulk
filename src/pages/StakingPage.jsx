@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import { ethers } from "ethers";
 import { toast } from "react-toastify";
 import ABI from "../ABI";
-import "../stakingPage.css";
+import "../pages.css";
 
 function StakingPage() {
   const [inputValue, setInputValue] = useState("");
@@ -105,22 +105,26 @@ function StakingPage() {
   };
 
   return (
-    <div>
+    <div className="stake-container">
+      
       <p className="m-2">{connectSignal}</p>
+      <div>
+              <h1 className="text-center" style={{padding: "5px", marginTop: '20px', border: "2px black solid", borderRadius: "10px"}}>STATUS: Under Development</h1>
+            </div>
       <div class="container mt-5">
         <div class="container text-center">
           <div class="row align-items-center">
             <div class="col-3-lg col-lg-6 border rounded bg-warning border-warning m-2 mx-auto">
               <p>Amount Staked</p>
-              <p>{stakingBalance} SLING</p>
+              <p>{stakingBalance} WBUK</p>
             </div>
             <div class="col-3-lg col-lg-6 border rounded bg-warning border-warning m-2 mx-auto">
               <p>Reward Balance</p>
-              <p>{rewardBalance} SLING</p>
+              <p>{rewardBalance} WBUK</p>
             </div>
             <div className="col-3-lg border rounded bg-warning border-warning m-2 mx-auto">
               <p>Token Balance</p>
-              <p>{tokenBalance} SLING</p>
+              <p>{tokenBalance} WBUK</p>
             </div>
           </div>
         </div>
@@ -130,8 +134,8 @@ function StakingPage() {
           <div class="col-md-6">
             <div class="container transfer-form text-center mb-5 box-showdown ">
               <div className="staking-form">
-                <h1>STAKE SLING</h1>
-                <p>Duration: 90 Days</p>
+                <h1>GET MORE WINBULK(WBUK) TOKEN</h1>
+                <p>STAKE WITH THE FORM BELOW</p>
                 <form onSubmit={handleSubmit}>
                   <input
                     type="number"
@@ -167,7 +171,7 @@ function StakingPage() {
                     </button>
                   </div>
                   <button className="submit-button" onClick={handleDeposit}>
-                    DEPOSIT
+                    STAKE
                   </button>
                 </form>
               </div>
@@ -231,7 +235,7 @@ function StakingPage() {
                 </tbody>
               </table>
               <p className="mt-5 text-center" style={{ fontSize: "0.8rem" }}>
-                Earn Rewards: By staking SLING tokens, you can earn rewards. The
+                Earn Rewards: By staking WINBULK(WBUK) tokens, you can earn rewards. The
                 more tokens you stake and the longer you stake them, the more
                 rewards you can potentially earn.
               </p>

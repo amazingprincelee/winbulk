@@ -1,3 +1,130 @@
+
+/* start of swap form styling */
+
+.swap-form {
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.token-1-selector, .token-2-selector {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
+              linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+              rgba(24, 24, 24, 0.9);
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+
+.token-selector, .swap-form-balance {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.swap-form p {
+  font-size: 1.5rem;
+}
+
+.token-1-btn {
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.token-2-btn {
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  border-radius: 20px;
+  padding: 4px;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.toggle-icon {
+  background: none;
+  margin: 10px;
+  border-radius: 50px;
+  box-shadow: 3px 3px;
+}
+
+
+
+.connect2wallet-btn{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 2rem;
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  color: white;
+}
+
+.connect2wallet-btn:hover, .toggle-icon:hover {
+  background: lightgreen;
+  color: #060606;
+}
+
+
+
+
+
+/* End of swap form styling */
+
+
+/* Start lottery page styling */
+
+/* Start lottery page styling */
+
+.lottery-page {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.lottery-page div {
+  margin: auto;
+  max-width: 700px;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.status-container {
+  border-radius: 10px;
+  border: 2px black solid;
+}
+
+@media screen and (max-width: 768px) {
+  .lottery-page div {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* End lottery page styling */
+
+
+/* End lottery page styling */
+
+
+
+
+
+.stake-container{
+  margin-top: 40px;
+  
+}
+
+.swap-page-container{
+  margin-top: 80px;
+  margin-bottom: 50px;
+  
+}
+
+
 .staking-page-container {
     display: flex;
     flex-direction: column;
@@ -47,6 +174,7 @@
     border-radius: 10px;
     margin-top: 20px;
     font-size: 1 rem;
+    color: white
   }
   
   .box-showdown {

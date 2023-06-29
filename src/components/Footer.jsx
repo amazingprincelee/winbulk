@@ -1,15 +1,12 @@
 import React from "react";
 import logo from "../images/logo.png";
 
-// PreviousComponent code...
-// ...
-
 function Footer() {
   return (
-    <footer className=" container footer text-light">
-      <div className="container py-5">
+    <footer className="container">
+      <div className="container">
         <div className="row">
-          <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <div className="col-md-6 col-lg-3 mb-4">
             <img src={logo} alt="logo" className="img-fluid mb-3" />
             <p>
               Maximize the potential of your cryptocurrency with our exclusive
@@ -19,10 +16,10 @@ function Footer() {
               opportunity to optimize your holdings and unlock substantial
               benefits.
             </p>
-            <p className=" mt-5">Designed by BB</p>
           </div>
-          <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-            <h3 className="underline mb-3">Utilities</h3>
+
+          <div className="col-md-6 col-lg-3 mb-4">
+            <h1>UTILITIES</h1>
             <ul className="list-unstyled">
               <li>
                 <a href="https://#">LOTTERY</a>
@@ -38,27 +35,33 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-            <h3 className="underline mb-3">Follow Us</h3>
+
+          <div className="col-md-6 col-lg-3 mb-4">
+            <h1>Follow Us</h1>
             <ul className="list-unstyled">
               <li>
-                <a href="https://#">Twitter</a>
+                <a href="https://twitter.com/OfficialWinbulk" target="_blank" rel="noopener noreferrer">Twitter</a>
               </li>
               <li>
-                <a href="http://#">Telegram</a>
+                <a href="https://t.me/OfficialWinbulk" target="_blank" rel="noopener noreferrer">Telegram</a>
               </li>
               <li>
-                <a href="http://#">Facebook</a>
+                <a href="https://facebook.com/OfficialWinbulk" target="_blank" rel="noopener noreferrer">Facebook</a>
               </li>
             </ul>
           </div>
+
+          <div className="col-md-6 col-lg-3 mb-4">
+            <h1>CONTACT US</h1>
+            <p>Email: team@winbulk.com</p>
+          </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="col text-center">
+
+        <div className="container copywrite">
           <p>
             &copy; {new Date().getFullYear()} WINBULK. All rights reserved.
           </p>
+          <p>Design by BB</p>
         </div>
       </div>
     </footer>

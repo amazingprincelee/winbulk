@@ -3,14 +3,14 @@ import { Table } from 'react-bootstrap';
 
 const TokenTable = () => {
   const maxSupply = 10e9;
-  const sales = 25e6;
-  const team = 5e6;
+  const sales = 250e6;
+  const team = 50e6;
   const bonuses = 10e6;
-  const airdrop = 2e6;
-  const bounty = 2e6;
-  const liquidity = 2e9;
-  const winLotteryServices = 1e9;
-  const lockedRemainder = maxSupply - (sales + team + bonuses + airdrop + bounty + liquidity + winLotteryServices);
+  const airdrop = 20e6;
+  const bounty = 20e6;
+  const liquidity = 20e9;
+  const winLotteryServices = 10e9;
+  const lockedRemainder =  (sales + team + bonuses + airdrop + bounty + liquidity + winLotteryServices) - maxSupply;
 
   const formatValue = (value) => {
     return value.toLocaleString();
@@ -23,8 +23,8 @@ const TokenTable = () => {
     { label: 'Airdrop', value: formatValue(airdrop) },
     { label: 'Bounty', value: formatValue(bounty) },
     { label: 'Liquidity', value: formatValue(liquidity) },
-    { label: 'Win Lottery Services', value: formatValue(winLotteryServices) },
-    { label: 'Locked', value: formatValue(lockedRemainder) },
+    { label: 'WinBULK Lottery Services', value: formatValue(winLotteryServices) },
+    { label: 'AMOUNT Locked', value: formatValue(lockedRemainder) },
   ];
 
   return (
