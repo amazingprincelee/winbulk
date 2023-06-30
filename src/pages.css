@@ -74,7 +74,53 @@
 /* End of swap form styling */
 
 
-/* Start lottery page styling */
+/* Start sales timer styling */
+
+.time-case {
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  margin: 5px;
+  padding: 10px;
+}
+
+/* Start sales timer styling */
+
+.status-container {
+  border-radius: 10px;
+  border: 2px black solid;
+}
+
+@media screen and (max-width: 768px) {
+  .lottery-page div {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+.timer-label {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.time-case {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer-row {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* End timer component styling */
+
+
 
 /* Start lottery page styling */
 
@@ -92,22 +138,9 @@
   overflow-x: hidden;
 }
 
-.status-container {
-  border-radius: 10px;
-  border: 2px black solid;
-}
-
-@media screen and (max-width: 768px) {
-  .lottery-page div {
-    width: 100%;
-    padding: 10px;
-  }
-}
-
-/* End lottery page styling */
+/* End Lottery page styling */
 
 
-/* End lottery page styling */
 
 
 

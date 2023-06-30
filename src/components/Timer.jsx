@@ -37,12 +37,12 @@ const Timer = () => {
 
   return (
     <div>
-      <h1>Countdown Timer</h1>
-      <div>
-        <p>{days} days</p>
-        <p>{hours} hours</p>
-        <p>{minutes} minutes</p>
-        <p>{seconds} seconds</p>
+      <div className='row timer-row'>
+        <h6 className='timer-label'>WBUK SALES TO BEGIN IN</h6>
+        <p className='col time-case'>{days} D</p>
+        <p className='col time-case'>{hours} H</p>
+        <p className='col time-case'>{minutes} M</p>
+        <p className='col time-case'>{seconds} S</p>
       </div>
     </div>
   );

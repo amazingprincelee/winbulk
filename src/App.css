@@ -92,15 +92,31 @@ H3 {
 }
 
 
+.header-action-btn{
+  background: none;
+  width: 50%;
+  margin-top: 20px !important;
+}
+
+.action-btn {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  color: white;
+}
+
+
 .caculator-input, .caculator-output {
   border: rgb(246, 255, 0) 2px solid;
   height: 38px;
   padding: 8px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0;
   background: #ffffff;
   color: #3c3c3c;
   border-radius: 5px;
+  text-align: left;
 }
 
 
@@ -282,23 +298,97 @@ H3 {
 
 
 /* Ecosystem and utility area */
-
 .ecosystem-container {
- margin: 20px;
- border-radius: 10px;
- box-sizing: border-box;
- flex-wrap: nowrap;
+  margin: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px; /* Add a small bottom padding for visual spacing */
+}
+
+.ecosystem-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ecosystem-row {
+  display: flex;
 }
 
 .util-column {
-  background-image: linear-gradient(45deg, #333333, #000000);
-  color:#fff;
-  border: 3px orange solid;
+  flex: 0 0 auto;
+  margin: 10px;
   border-radius: 10px;
-  
+  background-image: linear-gradient(45deg, #333333, #000000);
+  color: #fff;
+  border: 3px orange solid;
+  padding: 20px;
+  width: 300px; /* Adjust the width of the columns as per your preference */
+  box-sizing: border-box;
+}
+
+.util-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.util-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.launch-button {
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.launch-button:hover {
+  background-color: #f7b667;
+}
+
+.ecosystem-scroll-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+
+/* Optional: Custom scrollbar styles */
+.ecosystem-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ecosystem-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.ecosystem-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.ecosystem-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+.status-btn {
+  padding: 3px;
+  border-radius: 5px;
+  background-image: linear-gradient(45deg, #333333, #000000);
+  color: #c5c5c5;
+}
   
 
-}
+
 
 /* end of ecosystem styling */
 

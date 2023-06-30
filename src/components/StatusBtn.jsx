@@ -3,7 +3,7 @@ import React from 'react'
 function StatusBtn(props) {
   return (
     <div>
-      <button>{props.status}</button>
+      <button className='status-btn'>{props.status}</button>
     </div>
   )
 }

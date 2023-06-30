@@ -9,30 +9,29 @@ function StakingPage() {
   const [currentAction, setCurrentAction] = useState(null);
   const [tokenBalance, setTokenBalance] = useState(0);
   const [stakingBalance, setStakingBalance] = useState(0.0);
-  const [stakeTransactions, setStakeTransactions] = useState([]); // state variable to store the stake transactions
+  const [stakeTransactions, setStakeTransactions] = useState([]);
   const [rewardBalance, setRewardBalance] = useState(0);
-  const [connectSignal, setConnectSignal] = useState("Not connect");
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
 
-  const provider = useMemo(() => new ethers.providers.Web3Provider(window.ethereum), []);
+  const provider = useMemo(
+    () => new ethers.providers.Web3Provider(window.ethereum),
+    []
+  );
   const signer = provider.getSigner();
   const contractAddress = "0x67397672ddE5F85A64aAf54C711CDBEC07484C35";
-  const contract = useMemo(() => new ethers.Contract(contractAddress, ABI, signer), [contractAddress, signer]);
+  const contract = useMemo(
+    () => new ethers.Contract(contractAddress, ABI, signer),
+    [contractAddress, signer]
+  );
 
   useEffect(() => {
     const connectWallet = async () => {
       await provider.send("eth_requestAccounts", []);
-    };
-
-    const getConnectSignal = async () => {
-      const connection = await contract.UIconnection();
-      console.log(connection);
-      setConnectSignal(connection);
+      setIsWalletConnected(true);
     };
 
     const getBalance = async () => {
-      const balance = await contract.getTokenBalance({
-        from: signer.getAddress(),
-      });
+      const balance = await contract.getTokenBalance(signer.getAddress());
       const balanceFormatted = ethers.utils.formatEther(balance);
       const balanceRounded = parseFloat(balanceFormatted).toFixed(2);
       setTokenBalance(balanceRounded);
@@ -43,9 +42,8 @@ function StakingPage() {
       const stakedBalanceFormatted = ethers.utils.formatEther(stakedBalance);
       setStakingBalance(stakedBalanceFormatted);
 
-      const transactionCount = await contract.getTransactionCount(); // Add this function to your contract
+      const transactionCount = await contract.getTransactionCount();
 
-      // Fetch stake transactions
       const transactions = [];
       for (let i = 0; i < transactionCount; i++) {
         const transaction = await contract.getTransaction(i);
@@ -61,7 +59,6 @@ function StakingPage() {
       setRewardBalance(rewardRounded);
     };
 
-    getConnectSignal().catch(console.error);
     connectWallet().catch(console.error);
     getBalance().catch(console.error);
     getStakingBalance().catch(console.error);
@@ -72,7 +69,7 @@ function StakingPage() {
     setInputValue(e.target.value);
   }
 
-  const handleDeposit = () => {
+  const handleConnectWallet = () => {
     setCurrentAction("deposit");
   };
 
@@ -81,7 +78,6 @@ function StakingPage() {
     const unstakeUpdate = await contract.unstake(transaction.amount);
     await unstakeUpdate.wait();
     toast.success("Withdrawal successful!");
-    // You may need to update the stake transactions after the withdrawal
   };
 
   const handlePercentageButtonClick = (percentage) => {
@@ -94,31 +90,35 @@ function StakingPage() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (currentAction === "deposit") {
-      const parsedValue = ethers.utils.parseEther(inputValue);
-      const depositUpdate = await contract.stake(parsedValue);
-      await depositUpdate.wait();
+  e.preventDefault();
+  if (currentAction === "deposit") {
+    const parsedValue = ethers.utils.parseEther(inputValue);
+    try {
+      const transaction = await contract.stake(parsedValue);
+      await transaction.wait();
       setInputValue("");
       toast.success("Deposit successful!"); // Display success toast
+    } catch (error) {
+      console.error("Error while staking:", error);
+      toast.error("Error while staking. Please try again.");
     }
-  };
+  }
+};
+
 
   return (
     <div className="stake-container">
-      
-      <p className="m-2">{connectSignal}</p>
-      <div>
-              <h1 className="text-center" style={{padding: "5px", marginTop: '20px', border: "2px black solid", borderRadius: "10px"}}>STATUS: Under Development</h1>
-            </div>
-      <div class="container mt-5">
-        <div class="container text-center">
-          <div class="row align-items-center">
-            <div class="col-3-lg col-lg-6 border rounded bg-warning border-warning m-2 mx-auto">
+      <p className="m-2">
+        {isWalletConnected ? "Wallet Connected" : "Not Connected"}
+      </p>
+      <div className="container mt-5">
+        <div className="container text-center">
+          <div className="row align-items-center">
+            <div className="col-3-lg col-lg-6 border rounded bg-warning border-warning m-2 mx-auto">
               <p>Amount Staked</p>
               <p>{stakingBalance} WBUK</p>
             </div>
-            <div class="col-3-lg col-lg-6 border rounded bg-warning border-warning m-2 mx-auto">
+            <div className="col-3-lg col-lg-6 border rounded bg-warning border-warning m-2 mx-auto">
               <p>Reward Balance</p>
               <p>{rewardBalance} WBUK</p>
             </div>
@@ -129,10 +129,10 @@ function StakingPage() {
           </div>
         </div>
       </div>
-      <div class="container ">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="container transfer-form text-center mb-5 box-showdown ">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-6">
+            <div className="container transfer-form text-center mb-5 box-showdown">
               <div className="staking-form">
                 <h1>GET MORE WINBULK(WBUK) TOKEN</h1>
                 <p>STAKE WITH THE FORM BELOW</p>
@@ -170,21 +170,29 @@ function StakingPage() {
                       Max
                     </button>
                   </div>
-                  <button className="submit-button" onClick={handleDeposit}>
-                    STAKE
-                  </button>
+                  {isWalletConnected ? (
+                    <button className="submit-button" type="submit">
+                      Stake
+                    </button>
+                  ) : (
+                    <button
+                      className="submit-button"
+                      onClick={handleConnectWallet}
+                    >
+                      Connect Wallet
+                    </button>
+                  )}
                 </form>
               </div>
             </div>
           </div>
-          <div class="col-md-6 mb-5">
+          <div className="col-md-6 mb-5">
             <div
-              className=" transfer-form box-showdown"
+              className="transfer-form box-showdown"
               style={{ height: "350px" }}
             >
               <h4>Transaction</h4>
-
-              <table class="table">
+              <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">STAKED</th>
@@ -196,38 +204,22 @@ function StakingPage() {
                   {stakeTransactions.map((transaction, index) => (
                     <tr key={index}>
                       <td>
-                        <p style={{ fontWeight: "bold" }}>
-                        {transaction.stakedAmount &&
-                          Math.floor(
-                            ethers.utils.formatUnits(
-                              transaction.stakedAmount,
-                              18
-                            )
-                          )}{" "}
-                        </p>
-                        <p>
-                          {transaction.daysLocked &&
-                            `${transaction.daysLocked} Day Locked`}
-                        </p>
+                        {transaction.amount
+                          ? ethers.utils.formatEther(transaction.amount)
+                          : "0"}
                       </td>
                       <td>
-                        {transaction.rewardEarned &&
-                          Math.floor(
-                            ethers.utils.formatUnits(
-                              transaction.rewardEarned,
-                              18
-                            )
-                          )}{" "}
-                        rewards earned
+                        {transaction.earned
+                          ? ethers.utils.formatEther(transaction.earned)
+                          : "0"}
                       </td>
 
                       <td>
                         <button
-                          type="button"
-                          className="btn btn-success"
+                          className="withdraw-button"
                           onClick={() => handleWithdraw(index)}
                         >
-                          WITHDRAW
+                          Withdraw
                         </button>
                       </td>
                     </tr>
@@ -235,9 +227,8 @@ function StakingPage() {
                 </tbody>
               </table>
               <p className="mt-5 text-center" style={{ fontSize: "0.8rem" }}>
-                Earn Rewards: By staking WINBULK(WBUK) tokens, you can earn rewards. The
-                more tokens you stake and the longer you stake them, the more
-                rewards you can potentially earn.
+                Earn Rewards: WBUK will be credited to your account for each
+                block you stake.
               </p>
             </div>
           </div>

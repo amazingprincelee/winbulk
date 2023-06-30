@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import { FaFacebook, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaTelegram, FaTwitter, FaFileAlt } from "react-icons/fa";
+import { useMediaQuery } from 'react-responsive';
 
 function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const isMobileView = useMediaQuery({ query: '(max-width: 767px)' });
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -28,7 +30,7 @@ function NavBar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-          <li className="nav-item">
+            <li className="nav-item">
               <Link
                 to="/"
                 className="nav-link active text-light"
@@ -39,7 +41,6 @@ function NavBar() {
                 HOME
               </Link>
             </li>
-            
             <li className="nav-item">
               <Link
                 to="/StakingPage"
@@ -56,7 +57,7 @@ function NavBar() {
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
               >
-               WINBULK SWAP
+                WINBULK SWAP
               </Link>
             </li>
             <li className="nav-item">
@@ -67,9 +68,21 @@ function NavBar() {
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={() => setIsNavOpen(false)}
               >
-                WINBULK LOTTORY
+                WINBULK LOTTERY
               </Link>
             </li>
+            {isMobileView && (
+              <li className="nav-item">
+                <a
+                  href="whitepaper-link"
+                  className="nav-link text-light"
+                  style={{ fontSize: "16px", margin: "10px" }}
+                  onClick={() => setIsNavOpen(false)}
+                >
+                  WHITEPAPER
+                </a>
+              </li>
+            )}
           </ul>
           <a href="https://t.me/OfficialWinbulk" target="_blank" className="social-link"><FaTelegram size={25} /></a>
           <a href="https://twitter.com/OfficialWinbulk" target="_blank" className="social-link"><FaTwitter size={25} /></a>

@@ -34,17 +34,12 @@ function Header() {
               self-propulsion. incorporating a unique and lucrative pair lottery
               system that generates significant profits.
             </p>
-            <div className="button-container">
-              <button
-                className="primary-btn"
-                onClick={() => history.push("/StakingPage")}
-              >
-                HOW TO BUY
-              </button>
-              <a href="htpp//#" className="whitepaper">
-                WHITEPAPER
-              </a>
-            </div>
+            <div class="header-action-btn d-flex flex-column flex-md-row justify-content-center align-items-center">
+  <button class="action-btn mb-3 mb-md-0 mx-md-2">HOW TO BUY</button>
+  <a class="whitepaper mx-md-2 d-none d-md-inline" href="">WHITEPAPER</a>
+</div>
+
+
           </div>
 
           <div className="right-column header-image">
