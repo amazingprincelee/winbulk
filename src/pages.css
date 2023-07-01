@@ -80,9 +80,35 @@
   background-image: linear-gradient(to right, #FFA500, #FF4500);
   margin: 5px;
   padding: 10px;
+  width: 15%;
 }
 
-/* Start sales timer styling */
+/* Media queries for adjusting timer size */
+
+@media (max-width: 768px) {
+  .time-case {
+    width: 20% !important;
+    font-size: 12px;
+    padding: 5px;
+
+   
+  }
+
+  .time-case p {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .time-case {
+    width: 10% !important;
+    font-size: 10px;
+    padding: 3px;
+  }
+}
+
+/* End sales timer styling */
 
 .status-container {
   border-radius: 10px;

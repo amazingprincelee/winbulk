@@ -39,10 +39,10 @@ const Timer = () => {
     <div>
       <div className='row timer-row'>
         <h6 className='timer-label'>WBUK SALES TO BEGIN IN</h6>
-        <p className='col time-case'>{days} D</p>
-        <p className='col time-case'>{hours} H</p>
-        <p className='col time-case'>{minutes} M</p>
-        <p className='col time-case'>{seconds} S</p>
+        <div className='col time-case'>{days} <p>DAY</p></div>
+        <div className='col time-case'>{hours} <p>HOUR</p></div>
+        <div className='col time-case'>{minutes} <p>MINUTES</p></div>
+        <div className='col time-case'>{seconds} <p>SECONDS</p></div>
       </div>
     </div>
   );

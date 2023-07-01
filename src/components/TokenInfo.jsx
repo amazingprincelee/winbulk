@@ -2,8 +2,22 @@ import React, { useState } from "react";
 import TokenDistribution from './TokenDistribution'
 
 function TokenInfo() {
-  const [hardCap, setHardCap] = useState("0 WBUK");
-  const [topHolders, setTopHolders] = useState(0);
+    const bnbTokenPrice = 0.00000005;
+    const tokenPriceDollar = 0.000012;
+    const totalSupply  = 100000000000;
+    const bnbCurrentPrice = 240;
+
+    const marketCapCalculation = (totalSupply * bnbTokenPrice) * bnbCurrentPrice;
+const formattedMarketCap = marketCapCalculation.toLocaleString();
+
+
+  const [hardCap, setHardCap] = useState(0);
+  const [holders, setHolders] = useState(0);
+  const [marketCap, setMarketCap] = useState(formattedMarketCap);
+
+ 
+
+  
 
   return (
     <div className="container token-info">
@@ -15,20 +29,24 @@ function TokenInfo() {
             <table class="table" style={{color:'white'}}>
               <tbody>
                 <tr>
-                  <td>TOKEN PRICE</td>
-                  <td>$ 0.00001</td>
+                  <td>TOKEN PRICE IN $</td>
+                <td>$ {tokenPriceDollar}</td>
                 </tr>
                 <tr>
-                  <td>AMOUNT RAISED</td>
-                  <td> {hardCap}</td>
+                  <td>TOKEN PRICE IN BNB</td>
+                  <td>0.00000005 BNB</td>
                 </tr>
                 <tr>
-                  <td>HARDCAP</td>
-                  <td>500 BNB</td>
+                  <td>AMOUNT TO SELL</td>
+                  <td>1000 BNB</td>
                 </tr>
                 <tr>
-                  <td>TOP HOLDERS</td>
-                  <td>{topHolders}</td>
+                  <td>AMOUNT SOLD</td>
+                  <td> {hardCap} BNB</td>
+                </tr>
+                <tr>
+                  <td>HOLDERS</td>
+                  <td>{holders}</td>
                 </tr>
                 <tr>
                   <td>MAX INVESTMENT</td>
@@ -37,6 +55,10 @@ function TokenInfo() {
                 <tr>
                   <td>MIN INVESTMENT</td>
                   <td>0.1 BNB</td>
+                </tr>
+                <tr>
+                  <td>Market Cap</td>
+                  <td>$ {marketCap}</td>
                 </tr>
               </tbody>
             </table>
@@ -53,106 +75,108 @@ function TokenInfo() {
           <table className="table top-holder-table" style={{color:'white'}}>
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">TIME</th>
-                <th scope="col">CHAIN</th>
+                <th scope="col">RANK</th>
+                <th scope="col">BALANCE</th>
+                <th scope="col">PRICE</th>
                 <th scope="col">WALLET ADDRESS</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>1 Hour Ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
+                
               </tr>
               <tr>
                 <th scope="row">2</th>
-                <td>2 days ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
+                
               </tr>
               <tr>
                 <th scope="row">3</th>
-                <td>1 week ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">4</th>
-                <td>3 weeks ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">5</th>
-                <td>1 month ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">6</th>
-                <td>2 months ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">7</th>
-                <td>3 months ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">8</th>
-                <td>6 months ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">9</th>
-                <td>1 year ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
               </tr>
               <tr>
                 <th scope="row">10</th>
-                <td>2 years ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
                 
               </tr>
               <tr>
                 <th scope="row">11</th>
-                <td>2 years ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
                 
               </tr>
               <tr>
                 <th scope="row">12</th>
-                <td>2 years ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
                 
               </tr>
               <tr>
                 <th scope="row">13</th>
-                <td>2 years ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
                 
               </tr>
               <tr>
                 <th scope="row">14</th>
-                <td>2 years ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
                 
               </tr>
               <tr>
                 <th scope="row">15</th>
-                <td>2 years ago</td>
-                <td>BSC</td>
+                <td>1,000,000</td>
+                <td>$1,000</td>
                 <td>0xbc6edr345...</td>
                 
               </tr>

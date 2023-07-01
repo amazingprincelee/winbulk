@@ -1,4 +1,6 @@
 
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +11,7 @@ body {
   background: url('/src/images/orangeBackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 footer {
@@ -58,6 +61,8 @@ footer {
  
 }
 
+/* Start header section styling area */
+
 .header {
   width: 100%;
   background-color: #ffa500;
@@ -69,55 +74,120 @@ footer {
   border: 2px solid #ffa500;
   color: #fff;
   box-sizing: border-box;
-  
-  
-
+  font-family: 'Roboto', sans-serif;
 }
 
-.header h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.website-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+
+
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 20px;
-  color: white;
+  margin-top: 100px;
+}
+
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.header-title {
   font-size: 2.5rem;
-  
-}
-
-/* the general style for the section heading (ecosysm, team, token info, roadmap) */
-H3 {
-
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
-  margin: 20px !important;
-
 }
 
+.motto {
+  margin: 0;
+  font-size: 14px;
+  color: #944b02;
+}
 
-.header-action-btn{
-  background: none;
-  width: 50%;
-  margin-top: 20px !important;
+.desc {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.header-action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .action-btn {
-  padding: 10px;
-  width: 100%;
+  padding: 10px 20px;
   border-radius: 10px;
   background-image: linear-gradient(to right, #FFA500, #FF4500);
   color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.whitepaper {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .right-column {
+    margin-left: 50px;
+  }
+
+  .desc {
+    text-align: left;
+    font-size: 1.5rem;
+  }
 }
 
 
-.caculator-input, .caculator-output {
-  border: rgb(246, 255, 0) 2px solid;
-  height: 38px;
-  padding: 8px;
-  font-size: 0.8rem;
-  margin: 0;
-  background: #ffffff;
-  color: #3c3c3c;
-  border-radius: 5px;
-  text-align: left;
+.right-column {
+  display: none; /* Hide the right-column by default */
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
+
+@media (min-width: 768px) {
+  .right-column {
+    display: flex; /* Display the right-column on screens larger than 768px */
+    margin-left: 50px;
+  }
+}
+
+
+/* End of styling Heading area */
+
 
 
 
@@ -158,13 +228,10 @@ H3 {
 
 /* Begin the team styling */
 
-
 .team {
-  
   border: 2px solid rgb(119, 78, 2);
   border-radius: 10px;
   padding: 10px;
-  
 }
 
 .team-desc {
@@ -180,6 +247,11 @@ H3 {
 
 .team-desc p {
   width: 60%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  
+
 }
 
 .team-details {
@@ -188,19 +260,35 @@ H3 {
 }
 
 .lead-member {
-  background-image: linear-gradient(45deg, #a48401, #944b02);
+  background-image: linear-gradient(45deg, #5b4d17, #010101);
   margin: 20px;
   border-radius: 10px;
   padding: 10px;
   color: white;
 }
 
-
 .member3-card {
-  background-image: linear-gradient(45deg, #cea503, #c26304);
+  background-image: linear-gradient(45deg, #5b4d17, #010101);
   border-radius: 10px;
   padding: 10px;
   color: white;
+}
+
+.team-details img {
+  width: 50px;
+  height: 50px;
+  
+}
+
+
+@media (max-width: 767px) {
+  .team-desc p {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  
+  }
 }
 
 /* end of team members area styling */
@@ -394,107 +482,3 @@ H3 {
 
 
 
-/* start header styling area */
-
-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-
-
-
-.header-container {
-  display: flex;
-  flex-direction: column;
-  
-}
-
-/* this is the WINBULK title style on the Header section */
-
-.header-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-}
-
-.motto {
-  margin: 0;
-  font-size: 10px;
-  color: #944b02;
-}
-
-.desc {
-  font-family: 'Montserrat', sans-serif;
-  width: 65%;
-}
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 767px) {
-  .desc {
-    font-size: 1.5rem;
-    width: 100%;
-  }
-}
-
-/* Media query for desktops */
-@media only screen and (min-width: 768px) {
-  .desc {
-    font-size: 1.8rem !important;
-  }
-}
-
-
-
-
-
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: justify;
-}
-
-
-
-@media (min-width: 768px) {
-  .header-container {
-    flex-direction: row;
-  }
-
-  .header-image {
-    display: block;
-    margin-left: 50px; /* adjust margin as needed */
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    width: 200px;
-    padding: 8px 16px;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-
-  .primary-btn:not(:last-child) {
-    margin-right: 10px;
-  }
-}
-
-
-@media (max-width: 767px) {
-  .right-column {
-    display: none;
-  }
-
-  .header-image {
-    display: none;
-  }
-
-  
-}

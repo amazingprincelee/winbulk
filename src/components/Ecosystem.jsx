@@ -16,7 +16,7 @@ function Ecosystem() {
             <p>
               Win Sale is one of our innovative decentralized utilities, it
               revolutionizing the way investments are made. With its highly
-              efficient and robust self-propelling marketing system, investors
+              efficient and robust self-propelling marketing system, investorswwq
               can now receive immediate bonuses upon purchasing and holding the
               token. Everyone participating in the Winbulk sales is a winner.
             </p>

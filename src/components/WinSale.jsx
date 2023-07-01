@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Timer from './Timer'
 
 function WinSale() {
-    const[tokenAmount, setTokenAmount] = useState("AMOUNT OF WBUK TO RECEIVE");
+    const[tokenAmount, setTokenAmount] = useState("");
 
 
   return (
@@ -11,8 +11,8 @@ function WinSale() {
         <h2>WINBULK SALES</h2>
         <Timer />
         <div className="row">
-  <input className="caculator-input col-6 text-justify" type="number" placeholder="Amount of BNB TO SEND" />
-  <p className="caculator-output col-6 text-justified">{tokenAmount}</p>
+  <input className="caculator-input col-6 text-justify" type="number" placeholder="Amount OF BNB" />
+  <input className="caculator-input col-6 text-justify" type="number" placeholder="AMOUNT OF WBUK" />
   <button className="btn btn-success">BUY WBUK</button>
 </div>
 
