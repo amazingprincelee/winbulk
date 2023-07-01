@@ -38,7 +38,7 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
                 </tr>
                 <tr>
                   <td>AMOUNT TO SELL</td>
-                  <td>1000 BNB</td>
+                  <td>1000 BNB - ($243,078,356)</td>
                 </tr>
                 <tr>
                   <td>AMOUNT SOLD</td>

@@ -12,6 +12,14 @@ function NavBar() {
     setIsNavOpen(!isNavOpen);
   };
 
+  const whitepaperLink = "https://winbulk.com/doc/whitepaper.pdf"; // Add the URL of the whitepaper here
+
+  const handleNavItemClick = () => {
+    if (isMobileView) {
+      setIsNavOpen(false); // Close the menu on mobile view after clicking a link
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ background: "orange" }}>
       <div className="container-fluid">
@@ -36,7 +44,7 @@ function NavBar() {
                 className="nav-link active text-light"
                 aria-current="page"
                 style={{ fontSize: "16px", margin: "10px" }}
-                onClick={() => setIsNavOpen(false)}
+                onClick={handleNavItemClick}
               >
                 HOME
               </Link>
@@ -46,7 +54,7 @@ function NavBar() {
                 to="/StakingPage"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
-                onClick={() => setIsNavOpen(false)}
+                onClick={handleNavItemClick}
               >
                 WINBULK STAKING
               </Link>
@@ -56,6 +64,7 @@ function NavBar() {
                 to="/SwapPage"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
+                onClick={handleNavItemClick}
               >
                 WINBULK SWAP
               </Link>
@@ -66,7 +75,7 @@ function NavBar() {
                 className="nav-link active text-light"
                 aria-current="page"
                 style={{ fontSize: "16px", margin: "10px" }}
-                onClick={() => setIsNavOpen(false)}
+                onClick={handleNavItemClick}
               >
                 WINBULK LOTTERY
               </Link>
@@ -74,10 +83,10 @@ function NavBar() {
             {isMobileView && (
               <li className="nav-item">
                 <a
-                  href="whitepaper-link"
+                  href={'https://winbulk.com/doc/whitepaper.pdf'}
                   className="nav-link text-light"
                   style={{ fontSize: "16px", margin: "10px" }}
-                  onClick={() => setIsNavOpen(false)}
+                  onClick={handleNavItemClick}
                 >
                   WHITEPAPER
                 </a>

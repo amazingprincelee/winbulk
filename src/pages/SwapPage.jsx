@@ -21,13 +21,6 @@ function SwapPage() {
       <div className="container">
         <div className="row">
           <div className="col-md-6" style={columnStyle}>
-            <p style={{ color: "white", fontSize: "1.2rem" }}>
-              Win Swap is a revolutionary decentralized exchange (DEX) platform
-              that empowers users to seamlessly trade cryptocurrencies with
-              enhanced security and efficiency. By leveraging blockchain
-              technology, Win Swap eliminates the need for intermediaries,
-              ensuring direct peer-to-peer transactions.
-            </p>
             <div>
               <h1 className="text-center" style={{padding: "5px", marginTop: '20px', border: "2px black solid", borderRadius: "10px"}}>STATUS: Under Development</h1>
             </div>

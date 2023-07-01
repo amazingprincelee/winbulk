@@ -3,11 +3,11 @@ import { Table } from 'react-bootstrap';
 
 const TokenTable = () => {
   const maxSupply = 10e9;
-  const sales = 250e6;
-  const team = 50e6;
-  const bonuses = 10e6;
-  const airdrop = 20e6;
-  const bounty = 20e6;
+  const sales = 10000e6;
+  const team = 1000e6;
+  const bonuses = 100e6;
+  const airdrop = 200e6;
+  const bounty = 200e6;
   const liquidity = 20e9;
   const winLotteryServices = 10e9;
   const lockedRemainder =  (sales + team + bonuses + airdrop + bounty + liquidity + winLotteryServices) - maxSupply;
@@ -23,8 +23,8 @@ const TokenTable = () => {
     { label: 'Airdrop', value: formatValue(airdrop) },
     { label: 'Bounty', value: formatValue(bounty) },
     { label: 'Liquidity', value: formatValue(liquidity) },
-    { label: 'WinBULK Lottery Services', value: formatValue(winLotteryServices) },
-    { label: 'AMOUNT Locked', value: formatValue(lockedRemainder) },
+    { label: 'Marketing', value: formatValue(winLotteryServices) },
+    { label: 'Amount to Locked', value: formatValue(lockedRemainder) },
   ];
 
   return (

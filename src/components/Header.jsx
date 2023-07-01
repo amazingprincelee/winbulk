@@ -2,6 +2,7 @@ import React from "react";
 import heroeImage from "../images/winbulk-utils.png";
 import WinSale from "./WinSale";
 
+
 function Header() {
   return (
     <div className="header">
@@ -25,7 +26,7 @@ function Header() {
 
               <div className="header-action-btn">
                 <button className="action-btn">HOW TO BUY</button>
-                <a className="whitepaper" href="#">
+                <a className="whitepaper" href="https://winbulk.com/doc/whitepaper.pdf">
                   WHITEPAPER
                 </a>
               </div>
