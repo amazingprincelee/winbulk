@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 
 const Roadmap = () => {
   return (
@@ -9,10 +10,10 @@ const Roadmap = () => {
           <div className="roadmap-item">
             <h2>Stage 1: Project Launch</h2>
             <ul>
-              <li>Web App Launch</li>
-              <li>Airdrop & Community Growth Initiatives</li>
+              <li>Web App Launch <FaCheck /></li>
+              <li>Airdrop & Community Growth Initiatives <FaCheck /></li>
+              <li>Launch of Social Media Campaign <FaCheck /></li>
               <li>Expansion of Web App Features</li>
-              <li>Launch of Social Media Campaign</li>
             </ul>
           </div>
           <div className="roadmap-item">

@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import the Link component from react-router-dom
 import StatusBtn from "./StatusBtn";
 import 'simplebar-react/dist/simplebar.min.css';
 import SimpleBar from 'simplebar-react';
-
 
 function Ecosystem() {
   return (
@@ -20,7 +20,9 @@ function Ecosystem() {
               can now receive immediate bonuses upon purchasing and holding the
               token. Everyone participating in the Winbulk sales is a winner.
             </p>
-            <button className="launch-button">Launch App</button>
+            <Link to="/"> {/* Add the Link component and specify the target route */}
+              <button className="launch-button">Launch App</button>
+            </Link>
           </div>
           <div className="util-column">
             <h1 className="util-title">WINBULK LOTTERY</h1>
@@ -32,7 +34,9 @@ function Ecosystem() {
               effortlessly create their own lotteries and invite friends,
               family, or the wider community to join in on the fun.
             </p>
-            <button className="launch-button">Launch App</button>
+            <Link to="/LotteryPage"> {/* Add the Link component and specify the target route */}
+              <button className="launch-button">Launch App</button>
+            </Link>
           </div>
           <div className="util-column">
             <h1 className="util-title">WINBULK STAKING</h1>
@@ -44,7 +48,9 @@ function Ecosystem() {
               users contribute to the validation and security of the network
               while being rewarded with additional tokens.
             </p>
-            <button className="launch-button">Launch App</button>
+            <Link to="/StakingPage"> {/* Add the Link component and specify the target route */}
+              <button className="launch-button">Launch App</button>
+            </Link>
           </div>
           <div className="util-column">
             <h1 className="util-title">WINBULK SWAP</h1>
@@ -56,7 +62,9 @@ function Ecosystem() {
               technology, Win Swap eliminates the need for intermediaries,
               ensuring direct peer-to-peer transactions.
             </p>
-            <button className="launch-button">Launch App</button>
+            <Link to="/SwapPage"> {/* Add the Link component and specify the target route */}
+              <button className="launch-button">Launch App</button>
+            </Link>
           </div>
         </div>
       </div>

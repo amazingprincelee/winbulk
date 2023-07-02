@@ -178,6 +178,23 @@ footer {
   margin-top: 20px;
 }
 
+
+.message-container {
+  border: #944b02;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.close-btn {
+  background: none;
+  padding: 2px;
+}
+
+.buy-btn-message {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .right-column {
     display: flex; /* Display the right-column on screens larger than 768px */
