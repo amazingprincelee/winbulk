@@ -39,6 +39,7 @@ function WinSale() {
             type="number"
             placeholder="Amount OF BNB"
             value={bnbInputValue}
+            style={{ borderRadius: "5px", padding: "5px" }}
           />
           <input
             onChange={handleChangeWbukInput}
@@ -46,6 +47,7 @@ function WinSale() {
             type="number"
             placeholder="AMOUNT OF WBUK"
             value={wbukInputValue}
+            style={{ borderRadius: "5px", padding: "5px" }}
           />
           <button
             className={`btn ${!isTokenSale ? 'btn-danger' : 'btn-success'}`}
