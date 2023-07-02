@@ -16,24 +16,24 @@ const Roadmap = () => {
             </ul>
           </div>
           <div className="roadmap-item">
-            <h2>Stage 3: Growth and Partnerships</h2>
+          <h2>Stage 2: WinBulk Sales & Expansion</h2>
             <ul>
-              <li>Coinmarketcap & Coingecko Listing</li>
-              <li>Airdrop & Community Growth Strategies</li>
-              <li>Engagement in Community Events</li>
-              <li>Establishment of Partnerships with Renowned Projects</li>
+              <li>WinBulk Sales (First Utility Launch)</li>
+              <li>Listed on Pancakeswap Exchange</li>
+              <li>Introduction of Second Utility Feature</li>
+              <li>Integration with Payment Gateway</li>
             </ul>
           </div>
         </div>
 
         <div className="col-lg-6">
           <div className="roadmap-item">
-            <h2>Stage 2: WinBulk Sales & Expansion</h2>
+          <h2>Stage 3: Growth and Partnerships</h2>
             <ul>
-              <li>WinBulk Sales (First Utility Launch)</li>
-              <li>Listed on Pancakeswap Exchange</li>
-              <li>Introduction of Second Utility Feature</li>
-              <li>Integration with Payment Gateway</li>
+              <li>Coinmarketcap & Coingecko Listing</li>
+              <li>Airdrop & Community Growth Strategies</li>
+              <li>Engagement in Community Events</li>
+              <li>Establishment of Partnerships with Renowned Projects</li>
             </ul>
           </div>
           <div className="roadmap-item">
