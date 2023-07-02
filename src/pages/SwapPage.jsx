@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TokenSwapForm from "../components/TokenSwapForm";
 import "../pages.css";
 
@@ -14,6 +14,10 @@ function SwapPage() {
     height: "auto", // Remove the fixed height for the columns
     marginBottom: "20px", // Add some spacing between the columns
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="swap-page-container">

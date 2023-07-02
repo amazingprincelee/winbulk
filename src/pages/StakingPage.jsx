@@ -25,9 +25,11 @@ function StakingPage() {
   );
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const connectWallet = async () => {
       await provider.send("eth_requestAccounts", []);
       setIsWalletConnected(true);
+      
     };
 
     const getBalance = async () => {
@@ -59,19 +61,27 @@ function StakingPage() {
       setRewardBalance(rewardRounded);
     };
 
-    connectWallet().catch(console.error);
-    getBalance().catch(console.error);
-    getStakingBalance().catch(console.error);
-    getRewardBalanceUi().catch(console.error);
+    
+  
   }, [contract, provider, signer]);
 
   function handleChange(e) {
     setInputValue(e.target.value);
   }
 
-  const handleConnectWallet = () => {
-    setCurrentAction("deposit");
+  const handleConnectWallet = async () => {
+    try {
+      await connectWallet();
+      setIsWalletConnected(true);
+      await getBalance();
+      await getStakingBalance();
+      await getRewardBalanceUi();
+    } catch (error) {
+      console.error("Error connecting wallet:", error);
+      toast.error("Error connecting wallet. Please try again.");
+    }
   };
+  
 
   const handleWithdraw = async (index) => {
     const transaction = stakeTransactions[index];
@@ -90,20 +100,21 @@ function StakingPage() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  if (currentAction === "deposit") {
-    const parsedValue = ethers.utils.parseEther(inputValue);
-    try {
-      const transaction = await contract.stake(parsedValue);
-      await transaction.wait();
-      setInputValue("");
-      toast.success("Deposit successful!"); // Display success toast
-    } catch (error) {
-      console.error("Error while staking:", error);
-      toast.error("Error while staking. Please try again.");
+    e.preventDefault();
+    if (isWalletConnected && currentAction === "deposit") {
+      const parsedValue = ethers.utils.parseEther(inputValue);
+      try {
+        const transaction = await contract.stake(parsedValue);
+        await transaction.wait();
+        setInputValue("");
+        toast.success("Deposit successful!"); // Display success toast
+      } catch (error) {
+        console.error("Error while staking:", error);
+        toast.error("Error while staking. Please try again.");
+      }
     }
-  }
-};
+  };
+  
 
 
   return (

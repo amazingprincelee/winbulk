@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect} from "react";
 import { Switch, Route } from 'react-router-dom';
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -15,6 +15,10 @@ import Team from "./components/Team";
 
 
 function App() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

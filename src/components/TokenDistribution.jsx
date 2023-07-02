@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 const TokenTable = () => {
   const maxSupply = 10e9;
-  const sales = 10000e6;
+  const sales = 20000e6;
   const team = 1000e6;
   const bonuses = 100e6;
   const airdrop = 200e6;

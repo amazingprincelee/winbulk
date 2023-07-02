@@ -11,7 +11,8 @@ function TokenInfo() {
     const marketCapCalculation = (totalSupply * bnbTokenPrice) * bnbCurrentPrice;
 const formattedMarketCap = marketCapCalculation.toLocaleString();
 
-
+  const [amountSold, setAmountSold] = useState(0);
+  const [amountRaised, setAmountRaised] = useState(0)// Amount of BNB raised from sales
   const [hardCap, setHardCap] = useState(0);
   const [holders, setHolders] = useState(0);
   const [marketCap, setMarketCap] = useState(formattedMarketCap);
@@ -25,9 +26,9 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
       <h3>TOKEN INFO</h3>
       <div className="row mt-5 token-content">
         <div className="col-md-6">
-          <div class="sales-info">
+          <div className="sales-info">
             <h1>SALES INFORMATION</h1>
-            <table class="table" style={{color:'white'}}>
+            <table className="table" style={{color:'white'}}>
               <tbody>
                 <tr>
                   <td>TOKEN PRICE IN $</td>
@@ -38,12 +39,17 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
                   <td>0.00000005 BNB</td>
                 </tr>
                 <tr>
-                  <td>AMOUNT TO SELL</td>
-                  <td>1000 BNB - ($243,078,356)</td>
+                  <td>HARDCAP</td>
+                  <td>1000 BNB</td>
+                </tr>
+                <tr>
+                  <td>AMOUNT RAISED</td>
+                  {/* amount of raise in bnb */}
+                  <td>{amountRaised} BNB</td>
                 </tr>
                 <tr>
                   <td>AMOUNT SOLD</td>
-                  <td> {hardCap} BNB</td>
+                  <td> {amountSold}</td>
                 </tr>
                 <tr>
                   <td>HOLDERS</td>
