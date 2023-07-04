@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import { FaFacebook, FaTelegram, FaTwitter, FaFileAlt } from "react-icons/fa";
+import { FaFacebook, FaTelegram, FaTwitter, FaDiscord } from "react-icons/fa";
 import { useMediaQuery } from 'react-responsive';
 
 function NavBar() {
@@ -96,6 +96,7 @@ function NavBar() {
           <a href="https://t.me/OfficialWinbulk" target="_blank" className="social-link"><FaTelegram size={25} /></a>
           <a href="https://twitter.com/OfficialWinbulk" target="_blank" className="social-link"><FaTwitter size={25} /></a>
           <a href="https://www.facebook.com/OfficialWinBulk" target="_blank" className="social-link"><FaFacebook size={25} /></a>
+          <a href="https://discord.gg/h4z79eCQ" target="_blank" className="social-link"><FaDiscord size={25} /></a>
         </div>
       </div>
     </nav>
