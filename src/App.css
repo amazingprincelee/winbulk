@@ -455,9 +455,12 @@ footer {
   cursor: pointer;
 }
 
+
+
 .launch-button:hover {
-  background-color: #f7b667;
+  background-color: #000000 !important;
 }
+
 
 .ecosystem-scroll-container {
   max-width: 100%;

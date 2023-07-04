@@ -9,6 +9,7 @@ import TokenInfo from "./components/TokenInfo";
 import StakingPage from "./pages/StakingPage";
 import LotteryPage from "./pages/LotteryPage";
 import SwapPage from "./pages/SwapPage";
+import BlockchainServices from "./pages/BlockchainServices";
 import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
 
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/SwapPage">
           <SwapPage />
+        </Route>
+        <Route path="/BlockchainServices">
+          <BlockchainServices />
         </Route>
       </Switch>
       <Footer />

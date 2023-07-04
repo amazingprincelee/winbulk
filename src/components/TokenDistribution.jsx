@@ -24,7 +24,7 @@ const TokenTable = () => {
     { label: 'Bounty', value: formatValue(bounty) },
     { label: 'Liquidity', value: formatValue(liquidity) },
     { label: 'Marketing', value: formatValue(winLotteryServices) },
-    { label: 'Amount to Locked', value: formatValue(lockedRemainder) },
+    { label: 'Amount to Lock', value: formatValue(lockedRemainder) },
   ];
 
   return (
