@@ -77,7 +77,7 @@ function NavBar() {
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
               >
-                WINBULK LOTTERY
+                WINBULK WINPLAY
               </Link>
             </li>
             {isMobileView && (

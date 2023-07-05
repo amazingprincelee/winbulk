@@ -28,14 +28,13 @@ function Ecosystem() {
             </Link>
           </div>
           <div className="util-column">
-            <h1 className="util-title">WINBULK LOTTERY</h1>
+            <h1 className="util-title">WINPLAY</h1>
             <StatusBtn status="5% Completed" />
             <p>
-              Unleash the Power of Chance With WINBULK, users have the ability
-              to create and participate in lotteries using our intuitive
-              decentralized application (dApp). The process is simple: users can
-              effortlessly create their own lotteries and invite friends,
-              family, or the wider community to join in on the fun.
+              Unleash the Power of Chance With WinPlay, users have the ability
+              to create and participate our intuitive WinPlay
+              decentralized application (dApp) system. The process is simple: users can
+              effortlessly create their own game and invite friends,
             </p>
             <Link to="/LotteryPage">
               {" "}

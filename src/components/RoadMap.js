@@ -40,7 +40,7 @@ const Roadmap = () => {
           <div className="roadmap-item">
             <h2>Stage 4: Enhancing Connectivity</h2>
             <ul>
-              <li>Launch of Lottery Utility Feature</li>
+              <li>WinPlay Launch</li>
               <li>Active Participation in Community Events</li>
               <li>Implementation of Cross-Chain Solutions</li>
               <li>Introduction of Winbulk Dapp development Services (WDD SERVICES)</li>
