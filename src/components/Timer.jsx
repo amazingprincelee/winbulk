@@ -7,7 +7,7 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const countdownDate = new Date('July 10, 2023 00:00:00').getTime();
+    const countdownDate = new Date('July 17, 2023 10:00:00').getTime(); // Updated countdown date and time
 
     const updateTimer = setInterval(() => {
       const now = new Date().getTime();

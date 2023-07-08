@@ -40,6 +40,7 @@ function Header() {
                 <a
                   className="whitepaper"
                   href="https://winbulk.com/doc/whitepaper.pdf"
+                  target="_blank"
                 >
                   WHITEPAPER
                 </a>

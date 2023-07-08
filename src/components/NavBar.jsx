@@ -84,6 +84,7 @@ function NavBar() {
               <li className="nav-item">
                 <a
                   href={'https://winbulk.com/doc/whitepaper.pdf'}
+                  target="_blank" 
                   className="nav-link text-light"
                   style={{ fontSize: "16px", margin: "10px" }}
                   onClick={handleNavItemClick}
@@ -94,7 +95,7 @@ function NavBar() {
             )}
           </ul>
           <a href="https://t.me/OfficialWinbulk" target="_blank" className="social-link"><FaTelegram size={25} /></a>
-          <a href="https://twitter.com/OfficialWinbulk" target="_blank" className="social-link"><FaTwitter size={25} /></a>
+          <a href="https://twitter.com/Winbulkofficial" target="_blank" className="social-link"><FaTwitter size={25} /></a>
           <a href="https://www.facebook.com/OfficialWinBulk" target="_blank" className="social-link"><FaFacebook size={25} /></a>
           <a href="https://discord.gg/h4z79eCQ" target="_blank" className="social-link"><FaDiscord size={25} /></a>
         </div>
