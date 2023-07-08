@@ -42,8 +42,8 @@ function Team() {
             <div className="team-details">
               <img src={bbPhoto} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>POSITION IS OPEN - AMBASSADOR</h4>
-                <p>An accomplished event organizer, dedicated social media activist, and Winbulk spokesperson.</p>
+                <h4>OPEN - AMBASSADOR</h4>
+                <p>Winbulk spokesperson.</p>
               </div>
             </div>
           </div>
@@ -53,8 +53,8 @@ function Team() {
             <div className="team-details">
               <img src={bbPhoto} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>POSITION IS OPEN - TECHNICAL ANALYST</h4>
-                <p>A proficient technical analyst, adept at analyzing complex data and providing valuable insights.</p>
+                <h4>OPEN - Research and Innovation</h4>
+                <p>Providing valuable insights.</p>
               </div>
             </div>
           </div>
@@ -64,8 +64,8 @@ function Team() {
             <div className="team-details">
               <img src={bbPhoto} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>POSITION IS OPEN - CONTENT DEVELOPER</h4>
-                <p>AI content developer, engaging in creating innovative content.</p>
+                <h4>Collinschyke - CONTENT MANAGER</h4>
+                <p>AI, BOT, content management.</p>
               </div>
             </div>
           </div>
