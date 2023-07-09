@@ -1,5 +1,6 @@
 import React from "react";
-import bbPhoto from "../images/user.png";
+import teamMember from "../images/team-member.png";
+
 
 function Team() {
   return (
@@ -18,7 +19,7 @@ function Team() {
         <div className="col-md-6">
           <div className="lead-member">
             <div className="team-details">
-              <img src={bbPhoto} alt="" />
+              <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
                 <h4>BB - FOUNDER/LEAD DEVELOPER</h4>
                 <p>The Visioneer of the project and overall concept, as well as the Lead developer.</p>
@@ -29,7 +30,7 @@ function Team() {
         <div className="col-md-6">
           <div className="lead-member">
             <div className="team-details">
-              <img src={bbPhoto} alt="" />
+              <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
                 <h4>LIZ - COO</h4>
                 <p>Streamlining and coordinating all operational processes with precision and efficiency. Human Relations (HR).</p>
@@ -40,7 +41,7 @@ function Team() {
         <div className="col-md-6 col-lg-4">
           <div className="member3-card">
             <div className="team-details">
-              <img src={bbPhoto} alt="" />
+              <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
                 <h4>OPEN - AMBASSADOR</h4>
                 <p>Winbulk spokesperson.</p>
@@ -51,10 +52,10 @@ function Team() {
         <div className="col-md-6 col-lg-4">
           <div className="member3-card">
             <div className="team-details">
-              <img src={bbPhoto} alt="" />
+              <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>OPEN - Research and Innovation</h4>
-                <p>Providing valuable insights.</p>
+                <h4>CollinsChyke - TECH MAN</h4>
+                <p>Master Of AI/BOT</p>
               </div>
             </div>
           </div>
@@ -62,10 +63,10 @@ function Team() {
         <div className="col-md-6 col-lg-4">
           <div className="member3-card">
             <div className="team-details">
-              <img src={bbPhoto} alt="" />
+              <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>Collinschyke - CONTENT MANAGER</h4>
-                <p>AI, BOT, content management.</p>
+                <h4>Phoenyx - CONTENT DEVELOPER</h4>
+                <p>content & activity manager.</p>
               </div>
             </div>
           </div>
