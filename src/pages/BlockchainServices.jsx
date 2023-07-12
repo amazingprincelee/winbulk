@@ -13,7 +13,17 @@ function BlockchainServices() {
         </div>
 
         <div className="content">
-          <h1>About Blockchain Service</h1>
+          <h1>ABOUT DAPP SERVICES</h1>
+          <p>
+            "Empowering Utilities. Unleashing Prosperity." Description: Our
+            innovative server is dedicated to helping individuals and businesses
+            create and enhance their own utilities, while also providing a
+            platform for buying and selling utility services using our exclusive
+            WBUK token. We enable you to harness the power of utility creation,
+            empowering you to thrive and succeed in today's dynamic marketplace.
+            With our server, you can unlock limitless possibilities and drive
+            your own prosperity forward.
+          </p>
           <p>
             Our Super Tech Blockchain development service Utility is dedicated
             to providing comprehensive utility development and maintenance
@@ -29,13 +39,7 @@ function BlockchainServices() {
             closely with project teams to understand their requirements and
             tailor our services to meet their unique goals.
           </p>
-          <p>
-            With a focus on innovation and efficiency, our Super Tech Blockchain
-            development service Utility ensures that the utilities we develop
-            are secure, scalable, and user-friendly. We employ best practices
-            and follow industry standards to deliver high-quality solutions that
-            drive utility adoption and enhance user experiences.
-          </p>
+         
           <p>
             Beyond initial development, we also offer ongoing utility
             maintenance services. This includes monitoring utility performance,
@@ -43,13 +47,7 @@ function BlockchainServices() {
             are up to date, and providing technical support to address any
             issues that may arise.
           </p>
-          <p>
-            We take pride in our ability to contribute to the success of other
-            projects by providing them with top-notch utility development and
-            maintenance services. Our aim is to empower projects to leverage the
-            full potential of blockchain technology and achieve their objectives
-            in an ever-evolving digital landscape.
-          </p>
+          
         </div>
       </div>
     </div>

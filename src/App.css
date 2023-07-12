@@ -332,24 +332,20 @@ footer {
 }
 
 
-.top-holder-table {
-  background-image: linear-gradient(45deg, #ffcc00, #ff7f00);
-  width: 100%; /* Set the width of the table */
-    table-layout: fixed; /* Prevent table from automatically adjusting column widths */
-    border-radius: 10px;
-    
-
-}
-
-.col-6 h1{
-  color:#ccc
-}
-
-.top-holder-table td, .top-holder-table th {
-    padding: 10px;
-}
-
 /* End token-info style-------------- */
+
+
+
+
+
+
+
+
+
+/*End Table style for Top Holder List */
+
+
+
 
 
 
@@ -424,6 +420,7 @@ footer {
 }
 
 .util-column {
+  position: relative;
   flex: 0 0 auto;
   margin: 10px;
   border-radius: 10px;
@@ -446,6 +443,10 @@ footer {
 }
 
 .launch-button {
+  position: absolute;
+  bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 2px;
   background-image: linear-gradient(to right, #FFA500, #FF4500);
   color: #fff;
   border: none;

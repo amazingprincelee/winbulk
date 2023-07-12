@@ -40,7 +40,7 @@ function Footer() {
             <h1>Follow Us</h1>
             <ul className="list-unstyled">
               <li>
-                <a href="https://twitter.com/Winbulkofficial" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://twitter.com/oldWinbulk" target="_blank" rel="noopener noreferrer">Twitter</a>
               </li>
               <li>
                 <a href="https://t.me/OfficialWinbulk" target="_blank" rel="noopener noreferrer">Telegram</a>

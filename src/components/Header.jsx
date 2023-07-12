@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom"; // Import the useHistory hook
 import heroeImage from "../images/winbulk-utils.png";
 import WinSale from "./WinSale";
 
+
 function Header() {
   const [showMessage, setShowMessage] = useState(false);
+  const history = useHistory(); // Get the history object from react-router-dom
 
   const handleClick = () => {
-    setShowMessage(true);
+    history.push("/TopHoldersTable"); // Navigate to the "top holders" page
   };
 
   const handleClose = () => {
@@ -35,7 +38,7 @@ function Header() {
 
               <div className="header-action-btn">
                 <button className="action-btn" onClick={handleClick}>
-                  HOW TO BUY
+                  TOP HOLDERS TABLE
                 </button>
                 <a
                   className="whitepaper"

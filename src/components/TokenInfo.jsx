@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import TokenDistribution from './TokenDistribution'
-import TopHolderTable from "./TopHolderTable";
+import Table from "./Table";
 
 function TokenInfo() {
-    const bnbTokenPrice = 0.00000005;
-    const tokenPriceDollar = 0.000012;
+    const bnbTokenPrice = 0.00000002.toFixed(8);
+    const tokenPriceDollar = 0.00000488;
     const totalSupply  = 100000000000;
     const bnbCurrentPrice = 240;
 
@@ -13,9 +13,11 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
 
   const [amountSold, setAmountSold] = useState(0);
   const [amountRaised, setAmountRaised] = useState(0)// Amount of BNB raised from sales
-  const [hardCap, setHardCap] = useState(0);
+  const [hardCap, setHardCap] = useState(1000);
   const [holders, setHolders] = useState(0);
   const [marketCap, setMarketCap] = useState(formattedMarketCap);
+  const [maxInvestment, setMaxInvestment] = useState(5);
+  const [minInvestment, setMinInvestment] = useState(0.1);
 
  
 
@@ -36,11 +38,11 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
                 </tr>
                 <tr>
                   <td>TOKEN PRICE IN BNB</td>
-                  <td>0.00000005 BNB</td>
+                  <td>{bnbTokenPrice} BNB</td>
                 </tr>
                 <tr>
                   <td>HARDCAP</td>
-                  <td>1000 BNB</td>
+                  <td>{hardCap} BNB</td>
                 </tr>
                 <tr>
                   <td>AMOUNT RAISED</td>
@@ -57,11 +59,11 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
                 </tr>
                 <tr>
                   <td>MAX INVESTMENT</td>
-                  <td>5 BNB</td>
+                  <td>{maxInvestment} BNB</td>
                 </tr>
                 <tr>
                   <td>MIN INVESTMENT</td>
-                  <td>0.1 BNB</td>
+                  <td>{minInvestment} BNB</td>
                 </tr>
                 <tr>
                   <td>Market Cap</td>
@@ -76,8 +78,13 @@ const formattedMarketCap = marketCapCalculation.toLocaleString();
           </div>
         </div>
 
-        <div className="col-md-6">
-         <TopHolderTable />
+        <div className="col-md-6 style-top-holder">
+        <h1 className="text-center">Top Holders Table</h1>
+        <p className="text-center">TO ENTER THE TOP HOLDER AND GET REWARDED.<br/> Buy more WBUK token to enter or maintain your rank</p>
+          <div className="">
+         <Table />
+          </div>
+       
         </div>
       </div>
     </div>

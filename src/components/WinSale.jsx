@@ -2,23 +2,26 @@ import React, { useState } from 'react';
 import Timer from './Timer';
 
 function WinSale() {
-  const [isTokenSale, setIsTokenSale] = useState(false);
+  const [isTokenSale, setIsTokenSale] = useState();
   const [bnbInputValue, setBnbInputValue] = useState('');
   const [wbukInputValue, setWbukInputValue] = useState('');
 
-  // Conversion rate: 1 wbuk = 0.00000005 BNB
-  const conversionRate = 0.00000005;
+  // Conversion rate: 1 wbuk = 0.00000002 BNB
+  const conversionRate = 0.00000002;
 
   const handleChangeBnbInput = (e) => {
     const bnbValue = e.target.value;
     setBnbInputValue(bnbValue);
-    setWbukInputValue(bnbValue / conversionRate);
+    const wbukValue = bnbValue / conversionRate;
+    const deductedWbukValue = wbukValue - (wbukValue * 0.15); // Deduct 15% from wbukValue
+    setWbukInputValue(deductedWbukValue);
   };
 
   const handleChangeWbukInput = (e) => {
     const wbukValue = e.target.value;
     setWbukInputValue(wbukValue);
-    setBnbInputValue(wbukValue * conversionRate)
+    const addedWbukValue = wbukValue + (wbukValue * 0.15); // Add 15% to wbukValue
+    setBnbInputValue(addedWbukValue * conversionRate);
   };
 
   const handleButtonClick = () => {

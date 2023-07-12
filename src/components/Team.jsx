@@ -40,11 +40,11 @@ function Team() {
         </div>
         <div className="col-md-6 col-lg-4">
           <div className="member3-card">
-            <div className="team-details">
+          <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>OPEN - AMBASSADOR</h4>
-                <p>Winbulk spokesperson.</p>
+                <h4>Phoenyx - CONTENT DEVELOPER</h4>
+                <p>Content management and Marketing.</p>
               </div>
             </div>
           </div>
@@ -62,11 +62,11 @@ function Team() {
         </div>
         <div className="col-md-6 col-lg-4">
           <div className="member3-card">
-            <div className="team-details">
+          <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>Phoenyx - CONTENT DEVELOPER</h4>
-                <p>content & activity manager.</p>
+                <h4>OPEN - AMBASSADOR</h4>
+                <p>Winbulk spokesperson.</p>
               </div>
             </div>
           </div>

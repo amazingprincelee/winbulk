@@ -12,6 +12,7 @@ import SwapPage from "./pages/SwapPage";
 import BlockchainServices from "./pages/BlockchainServices";
 import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
+import TopHoldersTable from "./pages/TopHoldersTable";
 
 
 
@@ -45,6 +46,9 @@ function App() {
         </Route>
         <Route path="/BlockchainServices">
           <BlockchainServices />
+        </Route>
+        <Route path="/TopHoldersTable">
+          <TopHoldersTable />
         </Route>
       </Switch>
       <Footer />
