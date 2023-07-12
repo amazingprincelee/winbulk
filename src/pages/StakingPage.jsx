@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { ethers } from "ethers";
 import { toast } from "react-toastify";
-import ABI from "../ABI";
+import ABI from "../ContractABI";
 import "../pages.css";
 
 function StakingPage() {

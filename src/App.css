@@ -409,15 +409,19 @@ footer {
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
+  flex: 1;
   flex-wrap: nowrap;
   overflow-x: auto;
   padding-bottom: 10px; /* Add a small bottom padding for visual spacing */
 }
 
+
+
 .ecosystem-heading {
   text-align: center;
   font-size: 24px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .ecosystem-row {
@@ -467,10 +471,36 @@ footer {
   background-color: #000000 !important;
 }
 
+.ecosystem-wrapper {
+  display: flex;
+  overflow-x: scroll;
+}
+
 
 .ecosystem-scroll-container {
+  margin-right: -10px; /* Adjust the value as needed */
+  padding-right: 10px; /* Adjust the value as needed */
   max-width: 100%;
   overflow-x: auto;
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+
+.scroll-indicator span {
+  font-size: 24px;
 }
 
 
@@ -500,7 +530,14 @@ footer {
   background-image: linear-gradient(45deg, #333333, #000000);
   color: #c5c5c5;
 }
-  
+
+
+@media screen and (max-width: 768px) {
+  .ecosystem-scroll-container {
+    margin-right: -20px; /* Adjust the value as needed */
+    padding-right: 20px; /* Adjust the value as needed */
+  }
+}
 
 
 

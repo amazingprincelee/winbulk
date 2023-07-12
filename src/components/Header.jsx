@@ -25,7 +25,7 @@ function Header() {
               <div className="header-title">
                 <h1 className="website-title">WINBULK</h1>
                 <p className="motto">
-                  THE FIRST PROFITABLE TOKEN SALE SYSTEM & LOTTERY DAPP
+                  THE FIRST PROFITABLE TOKEN SALE SYSTEM & UTILITIES
                 </p>
               </div>
 

@@ -1,6 +1,12 @@
 const ABI = [
   {
-    "inputs": [],
+    "inputs": [
+      {
+        "internalType": "address payable",
+        "name": "_deposit",
+        "type": "address"
+      }
+    ],
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
@@ -10,7 +16,7 @@ const ABI = [
       {
         "indexed": true,
         "internalType": "address",
-        "name": "owner",
+        "name": "tokenOwner",
         "type": "address"
       },
       {
@@ -22,11 +28,36 @@ const ABI = [
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "value",
+        "name": "tokens",
         "type": "uint256"
       }
     ],
     "name": "Approval",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "investor",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokens",
+        "type": "uint256"
+      }
+    ],
+    "name": "Invest",
     "type": "event"
   },
   {
@@ -47,7 +78,7 @@ const ABI = [
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "value",
+        "name": "tokens",
         "type": "uint256"
       }
     ],
@@ -56,12 +87,12 @@ const ABI = [
   },
   {
     "inputs": [],
-    "name": "UIconnection",
+    "name": "admin",
     "outputs": [
       {
-        "internalType": "string",
+        "internalType": "address",
         "name": "",
-        "type": "string"
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -70,26 +101,8 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "newLockPeriod",
-        "type": "uint256"
-      }
-    ],
-    "name": "adjustLockPeriod",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
-        "name": "owner",
+        "name": "tokenOwner",
         "type": "address"
       },
       {
@@ -118,11 +131,62 @@ const ABI = [
       },
       {
         "internalType": "uint256",
-        "name": "amount",
+        "name": "tokens",
         "type": "uint256"
       }
     ],
     "name": "approve",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "success",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "tokenOwner",
+        "type": "address"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "balance",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "balances",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "burn",
     "outputs": [
       {
         "internalType": "bool",
@@ -136,12 +200,38 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "account",
+        "internalType": "address payable",
+        "name": "newDeposit",
         "type": "address"
       }
     ],
-    "name": "balanceOf",
+    "name": "changeDepositAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "coreTeamWallets",
+    "outputs": [
+      {
+        "internalType": "address payable",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "decimals",
     "outputs": [
       {
         "internalType": "uint256",
@@ -155,12 +245,45 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "account",
+        "internalType": "uint256",
+        "name": "newMaxInvestment",
+        "type": "uint256"
+      }
+    ],
+    "name": "decreaseMaxInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newMinInvestment",
+        "type": "uint256"
+      }
+    ],
+    "name": "decreaseMinInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deposit",
+    "outputs": [
+      {
+        "internalType": "address payable",
+        "name": "",
         "type": "address"
       }
     ],
-    "name": "calculateRewards",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "feePercentage",
     "outputs": [
       {
         "internalType": "uint256",
@@ -173,17 +296,82 @@ const ABI = [
   },
   {
     "inputs": [],
-    "name": "claim",
+    "name": "founder",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getCurrentState",
+    "outputs": [
+      {
+        "internalType": "enum WinBulkSale.State",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTopHoldersLimit",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTopTokenHolders",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "halt",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "decimals",
+    "name": "hardCap",
     "outputs": [
       {
-        "internalType": "uint8",
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "icoState",
+    "outputs": [
+      {
+        "internalType": "enum WinBulkSale.State",
         "name": "",
         "type": "uint8"
       }
@@ -194,17 +382,32 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "spender",
-        "type": "address"
-      },
-      {
         "internalType": "uint256",
-        "name": "subtractedValue",
+        "name": "newMaxInvestment",
         "type": "uint256"
       }
     ],
-    "name": "decreaseAllowance",
+    "name": "increaseMaxInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newMinInvestment",
+        "type": "uint256"
+      }
+    ],
+    "name": "increaseMinInvestment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "invest",
     "outputs": [
       {
         "internalType": "bool",
@@ -212,38 +415,18 @@ const ABI = [
         "type": "bool"
       }
     ],
-    "stateMutability": "nonpayable",
+    "stateMutability": "payable",
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getRewardBalance",
-    "outputs": [
+    "inputs": [
       {
-        "internalType": "uint256",
+        "internalType": "address",
         "name": "",
-        "type": "uint256"
+        "type": "address"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getStakingBalance",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getTokenBalance",
+    "name": "investedAmounts",
     "outputs": [
       {
         "internalType": "uint256",
@@ -258,38 +441,16 @@ const ABI = [
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "index",
+        "name": "",
         "type": "uint256"
       }
     ],
-    "name": "getTransaction",
+    "name": "investorsWallets",
     "outputs": [
       {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "stakedAmount",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "rewardEarned",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "daysLocked",
-            "type": "uint256"
-          },
-          {
-            "internalType": "bool",
-            "name": "isWithdrawn",
-            "type": "bool"
-          }
-        ],
-        "internalType": "struct SlingStaking.Transaction",
+        "internalType": "address payable",
         "name": "",
-        "type": "tuple"
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -297,7 +458,7 @@ const ABI = [
   },
   {
     "inputs": [],
-    "name": "getTransactionCount",
+    "name": "maxInvestment",
     "outputs": [
       {
         "internalType": "uint256",
@@ -309,27 +470,16 @@ const ABI = [
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "spender",
-        "type": "address"
-      },
+    "inputs": [],
+    "name": "minInvestment",
+    "outputs": [
       {
         "internalType": "uint256",
-        "name": "addedValue",
+        "name": "",
         "type": "uint256"
       }
     ],
-    "name": "increaseAllowance",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -346,14 +496,8 @@ const ABI = [
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "rewardBalance",
+    "inputs": [],
+    "name": "raisedAmount",
     "outputs": [
       {
         "internalType": "uint256",
@@ -367,44 +511,26 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
+        "internalType": "address payable",
+        "name": "wallet",
+        "type": "address"
       }
     ],
-    "name": "stake",
+    "name": "removeCoreTeamWallets",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "staked",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
+    "inputs": [],
+    "name": "resume",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "stakingBalance",
+    "inputs": [],
+    "name": "saleEnd",
     "outputs": [
       {
         "internalType": "uint256",
@@ -417,12 +543,64 @@ const ABI = [
   },
   {
     "inputs": [],
+    "name": "saleStart",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_newPrice",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTokenPrice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newLimit",
+        "type": "uint256"
+      }
+    ],
+    "name": "setTopHoldersLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "symbol",
     "outputs": [
       {
         "internalType": "string",
         "name": "",
         "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "tokenPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -444,47 +622,13 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "transactions",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "stakedAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "rewardEarned",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "daysLocked",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "isWithdrawn",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
         "name": "to",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "amount",
+        "name": "tokens",
         "type": "uint256"
       }
     ],
@@ -492,7 +636,7 @@ const ABI = [
     "outputs": [
       {
         "internalType": "bool",
-        "name": "",
+        "name": "success",
         "type": "bool"
       }
     ],
@@ -513,7 +657,7 @@ const ABI = [
       },
       {
         "internalType": "uint256",
-        "name": "amount",
+        "name": "tokens",
         "type": "uint256"
       }
     ],
@@ -521,7 +665,7 @@ const ABI = [
     "outputs": [
       {
         "internalType": "bool",
-        "name": "",
+        "name": "success",
         "type": "bool"
       }
     ],
@@ -531,28 +675,19 @@ const ABI = [
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
+        "internalType": "address payable",
+        "name": "_address",
+        "type": "address"
       }
     ],
-    "name": "unstake",
+    "name": "updateCoreTeamWallets",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      }
-    ],
-    "name": "withdraw",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "payable",
+    "type": "receive"
   }
 ]
 

@@ -1,13 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom"; // Import the Link component from react-router-dom
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import StatusBtn from "./StatusBtn";
 import "simplebar-react/dist/simplebar.min.css";
 import SimpleBar from "simplebar-react";
 
 function Ecosystem() {
+
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+      setShowScrollIndicator(scrollLeft > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
-    <SimpleBar className="container ecosystem-scroll-container">
+    <div className="ecosystem-wrapper">
+    <SimpleBar className="container ecosystem-scroll-container"
+  >
       <h3 className="ecosystem-heading">ECOSYSTEM</h3>
+      {showScrollIndicator && (
+        <div className="scroll-indicator left">
+          <span>&#8249;</span>
+        </div>
+      )}
       <div className="ecosystem-container">
         <div className="ecosystem-row">
           <div className="util-column">
@@ -45,7 +70,7 @@ function Ecosystem() {
             <h1 className="util-title"> DAPP Services</h1>
             <StatusBtn status="10% Completed" />
             <p>
-              Our innovative server is dedicated to helping individuals and
+              Our innovative Dapp Services is dedicated to helping individuals and
               businesses create and enhance their own utilities, while also
               providing a platform for buying and selling utility services using
               our exclusive WBUK token. We enable you to harness the power of
@@ -91,6 +116,7 @@ function Ecosystem() {
         </div>
       </div>
     </SimpleBar>
+    </div>
   );
 }
 
