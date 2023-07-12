@@ -14,6 +14,11 @@ body {
   
 }
 
+/* text colors */
+.text-white {
+  color:#f1f1f1;
+}
+
 footer {
   background: url('/src/images/orangeBackground.jpg');
   background-repeat: no-repeat;

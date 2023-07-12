@@ -26,7 +26,7 @@ function SwapPage() {
         <div className="row">
           <div className="col-md-6" style={columnStyle}>
             <div>
-              <h1 className="text-center" style={{padding: "5px", marginTop: '20px', border: "2px black solid", borderRadius: "10px"}}>STATUS: Under Development</h1>
+              <h1 className="text-center" style={{padding: "5px", marginTop: '20px', border: "2px black solid", borderRadius: "10px"}}>STATUS: Under Construction</h1>
             </div>
           </div>
           <div className="col-md-6" style={columnStyle}>

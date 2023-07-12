@@ -9,7 +9,7 @@ function BlockchainServices() {
     <div className="container lottery-page">
       <div>
         <div className="status-container">
-          <h1 className="text-center status">STATUS: Under Development</h1>
+          <h1 className="text-center status">STATUS: Under Construction</h1>
         </div>
 
         <div className="content">
