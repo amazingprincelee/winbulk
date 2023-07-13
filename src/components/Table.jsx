@@ -13,7 +13,7 @@ function Table() {
   const [loading, setLoading] = useState(true);
 
   const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-  const contractAddress = '0x08B5bBEb5071cd0Ba8a2c9d1cc98d85B92A6f9d6';
+  const contractAddress = '0x246cc531a16103Cd883E1179ae880323D28b31C0';
   const contract = new ethers.Contract(contractAddress, ContractABI, provider);
 
   const fetchTopHoldersData = async () => {

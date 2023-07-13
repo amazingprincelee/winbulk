@@ -39,7 +39,7 @@ function WinSale() {
         const signer = provider.getSigner();
   
         // Create a contract instance
-        const contractAddress = "0x08B5bBEb5071cd0Ba8a2c9d1cc98d85B92A6f9d6"; // Replace with the actual contract address
+        const contractAddress = "0x246cc531a16103Cd883E1179ae880323D28b31C0"; // Replace with the actual contract address
         const contractABI = ABI; // Replace with the actual contract ABI
         const contract = new ethers.Contract(
           contractAddress,
