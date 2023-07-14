@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import DataTable, { createTheme } from 'react-data-table-component';
 import { ethers } from 'ethers';
-import ContractABI from '../ContractABI';
+import ABI from '../ContractABI';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 function Table() {
-  const rpcUrl = "https://data-seed-prebsc-1-s1.binance.org:8545/";
+  const rpcUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
 
   const [topHolders, setTopHolders] = useState(() => {
     const storedData = localStorage.getItem('topHolders');
     return storedData ? JSON.parse(storedData) : [];
   });
   const [loading, setLoading] = useState(true);
+  const [contractAddress, setContractAddress] = useState('0x49909799Aeb375A3f62CbBae5186C513CEceE4B6'); // Initial contract address
 
   const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-  const contractAddress = '0x246cc531a16103Cd883E1179ae880323D28b31C0';
-  const contract = new ethers.Contract(contractAddress, ContractABI, provider);
+  const contract = new ethers.Contract(contractAddress, ABI, provider);
 
   const fetchTopHoldersData = async () => {
     try {
@@ -37,12 +38,16 @@ function Table() {
   };
 
   useEffect(() => {
-    if (topHolders.length === 0) {
-      fetchTopHoldersData();
-    } else {
-      setLoading(false);
-    }
-  }, [topHolders]);
+    fetchTopHoldersData(); // Fetch the data initially
+
+    const interval = setInterval(() => {
+      fetchTopHoldersData(); // Fetch the data at a regular interval (e.g., 1 minute)
+    }, 60000); // 1 minute interval (adjust as needed)
+
+    return () => {
+      clearInterval(interval); // Clear the interval when the component is unmounted
+    };
+  }, [contractAddress]);
 
   const columns = [
     {
@@ -61,11 +66,13 @@ function Table() {
       name: 'Balance',
       selector: (row) => row.balance,
       sortable: true,
+      width: '150px',
     },
     {
       name: 'Earned',
       selector: (row) => row.earned,
       sortable: true,
+      width: '150px',
     },
   ];
 
@@ -93,13 +100,16 @@ function Table() {
 
   return (
     <div className="container">
-      <div className="table-container">
+      <div className="table-container" style={{ width: '100%', overflowX: 'auto' }}>
         {loading ? (
-          <div className='text-center'>Loading data...
-            <p>Please Wait A minute while we load the Top Holders Table.</p>
+          <div className='text-center'>
+            <ClipLoader color={"#ffffff"} loading={loading} size={35} />
+            <p>Loading data... Please wait a minute while we load the Top Holders Table.</p>
           </div>
         ) : topHolders.length > 0 ? (
-          <DataTable columns={columns} data={topHolders} theme="solarized" />
+          <div className="custom-table-container">
+            <DataTable columns={columns} data={topHolders} theme="solarized" />
+          </div>
         ) : (
           <div>Please Wait A minute while we load the Top Holders Table.</div>
         )}
