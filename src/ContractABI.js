@@ -315,6 +315,19 @@ const ABI = [
   },
   {
     "inputs": [],
+    "name": "defaultDuration",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "deposit",
     "outputs": [
       {
@@ -622,6 +635,19 @@ const ABI = [
     "inputs": [
       {
         "internalType": "uint256",
+        "name": "duration",
+        "type": "uint256"
+      }
+    ],
+    "name": "setDuration",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
         "name": "_newPercent",
         "type": "uint256"
       }
@@ -659,6 +685,13 @@ const ABI = [
       }
     ],
     "name": "setTopHoldersLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "start",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

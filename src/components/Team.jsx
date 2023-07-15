@@ -54,7 +54,7 @@ function Team() {
             <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>CollinsChyke - TECH MAN</h4>
+                <h4>Open Position - TECH MAN</h4>
                 <p>Master Of AI/BOT</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ function Team() {
           <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>OPEN - AMBASSADOR</h4>
+                <h4>Peasy - AMBASSADOR</h4>
                 <p>Winbulk spokesperson.</p>
               </div>
             </div>

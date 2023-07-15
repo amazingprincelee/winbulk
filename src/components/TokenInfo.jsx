@@ -1,28 +1,52 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { ethers } from "ethers";
 import TokenDistribution from "./TokenDistribution";
 import Table from "./Table";
+import contractAbi from "../ContractABI";
 
 function TokenInfo() {
-  const bnbTokenPrice = (0.00000002).toFixed(8);
-  const tokenPriceDollar = 0.00000488;
-  const totalSupply = 100000000000;
-  const bnbCurrentPrice = 240;
+  const rpcUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
+  const myContractAddress = '0x49909799Aeb375A3f62CbBae5186C513CEceE4B6';
 
-  const marketCapCalculation = totalSupply * bnbTokenPrice * bnbCurrentPrice;
-  const formattedMarketCap = marketCapCalculation.toLocaleString();
+  const [bnbTokenPrice, setBnbTokenPrice] = useState("0");
+  const [hardCap, setHardCap] = useState("0");
+  const [amountRaised, setAmountRaised] = useState("0");
+  const [maxInvestment, setMaxInvestment] = useState("0");
+  const [minInvestment, setMinInvestment] = useState("0");
 
-  const [amountSold, setAmountSold] = useState(0);
-  const [amountRaised, setAmountRaised] = useState(0); // Amount of BNB raised from sales
-  const [hardCap, setHardCap] = useState(1000);
-  const [holders, setHolders] = useState(0);
-  const [marketCap, setMarketCap] = useState(formattedMarketCap);
-  const [maxInvestment, setMaxInvestment] = useState(5);
-  const [minInvestment, setMinInvestment] = useState(0.1);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+        const contract = new ethers.Contract(myContractAddress, contractAbi, provider);
+
+        if (provider) {
+          const tokenPrice = ethers.utils.formatUnits(await contract.tokenPrice(), 18);
+          const hardCap = ethers.utils.formatUnits(await contract.hardCap(), 18);
+          const amountRaised = ethers.utils.formatUnits(await contract.raisedAmount(), 18);
+          const maxInvestment = ethers.utils.formatUnits(await contract.maxInvestment(), 18);
+          const minInvestment = ethers.utils.formatUnits(await contract.minInvestment(), 18);
+
+          setBnbTokenPrice(tokenPrice);
+          setHardCap(hardCap);
+          setAmountRaised(amountRaised);
+          setMaxInvestment(maxInvestment);
+          setMinInvestment(minInvestment);
+        } else {
+          console.error("Please connect to the correct Ethereum network");
+        }
+      } catch (error) {
+        console.error("Failed to connect to the Ethereum provider:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="container token-info">
       <div className="row  token-content">
-      <div className="col-md-6 style-top-holder">
+        <div className="col-md-6 style-top-holder">
           <h1 className="text-center">Top Holders Table</h1>
           <p className="text-center">
             TO ENTER THE TOP HOLDER AND GET REWARDED.
@@ -38,10 +62,6 @@ function TokenInfo() {
             <table className="table" style={{ color: "white" }}>
               <tbody>
                 <tr>
-                  <td>TOKEN PRICE IN $</td>
-                  <td>$ {tokenPriceDollar}</td>
-                </tr>
-                <tr>
                   <td>TOKEN PRICE IN BNB</td>
                   <td>{bnbTokenPrice} BNB</td>
                 </tr>
@@ -51,16 +71,11 @@ function TokenInfo() {
                 </tr>
                 <tr>
                   <td>AMOUNT RAISED</td>
-                  {/* amount of raise in bnb */}
                   <td>{amountRaised} BNB</td>
                 </tr>
                 <tr>
                   <td>AMOUNT SOLD</td>
-                  <td> {amountSold}</td>
-                </tr>
-                <tr>
-                  <td>HOLDERS</td>
-                  <td>{holders}</td>
+                  <td> </td>
                 </tr>
                 <tr>
                   <td>MAX INVESTMENT</td>
@@ -70,10 +85,7 @@ function TokenInfo() {
                   <td>MIN INVESTMENT</td>
                   <td>{minInvestment} BNB</td>
                 </tr>
-                <tr>
-                  <td>Market Cap</td>
-                  <td>$ {marketCap}</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
@@ -82,8 +94,6 @@ function TokenInfo() {
             <TokenDistribution />
           </div>
         </div>
-
-        
       </div>
     </div>
   );
