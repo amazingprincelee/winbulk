@@ -6,28 +6,35 @@ import ClipLoader from 'react-spinners/ClipLoader';
 
 function Table() {
   const rpcUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
+  const myContractAddress = '0x49909799Aeb375A3f62CbBae5186C513CEceE4B6';
+
+ 
+  
 
   const [topHolders, setTopHolders] = useState(() => {
     const storedData = localStorage.getItem('topHolders');
     return storedData ? JSON.parse(storedData) : [];
   });
   const [loading, setLoading] = useState(true);
-  const [contractAddress, setContractAddress] = useState('0x49909799Aeb375A3f62CbBae5186C513CEceE4B6'); // Initial contract address
+  const [contractAddress, setContractAddress] = useState(myContractAddress); // Initial contract address
+  const [currentPage, setCurrentPage] = useState(1);
 
   const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
   const contract = new ethers.Contract(contractAddress, ABI, provider);
 
   const fetchTopHoldersData = async () => {
     try {
+      setCurrentPage(1); // Reset current page to 1 when fetching new data
+
       const holders = await contract.getTopTokenHolders();
-  
+
       const topHoldersData = [];
       for (let i = 0; i < holders.length; i++) {
         const wallet = holders[i];
         const balance = await contract.balanceOf(wallet);
         const balanceInEth = ethers.utils.formatUnits(balance, 18); // Divide balance by 10^18
         const rank = i + 1;
-  
+
         topHoldersData.push({ rank, wallet, balance: balanceInEth, status: 'Earning BNB' });
       }
       setTopHolders(topHoldersData);
@@ -37,7 +44,6 @@ function Table() {
       console.error('Error fetching top holders data:', error);
     }
   };
-  
 
   useEffect(() => {
     fetchTopHoldersData(); // Fetch the data initially
@@ -110,10 +116,21 @@ function Table() {
           </div>
         ) : topHolders.length > 0 ? (
           <div className="custom-table-container">
-            <DataTable columns={columns} data={topHolders} theme="solarized" />
+            <DataTable
+              columns={columns}
+              data={topHolders}
+              theme="solarized"
+              pagination
+              paginationPerPage={10}
+              paginationDefaultPage={currentPage}
+              onChangePage={setCurrentPage}
+              paginationComponentOptions={{
+                noRowsPerPage: true
+              }}
+            />
           </div>
         ) : (
-          <div>Please Wait A minute while we load the Top Holders Table.</div>
+          <div className='text-white'>Please wait a minute while we load the Top Holders Table.</div>
         )}
       </div>
     </div>
