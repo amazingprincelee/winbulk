@@ -330,10 +330,24 @@ footer {
 
 .token-content {
   color: white;
+  margin: 0;
 }
 
 .sales-info  {
   font-size: 1rem !important;
+  padding: 20px;
+}
+
+
+ .space-above {
+  margin-top: 200px;
+}
+
+
+.style-top-holder{
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  padding: 20px;
+
 }
 
 

@@ -31,7 +31,7 @@ function WinSale() {
       try {
         setIsLoading(true);
 
-        await window.ethereum.request({ method: "eth_requestAccounts" });
+        await window.ethereum.send("eth_requestAccounts");
 
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
