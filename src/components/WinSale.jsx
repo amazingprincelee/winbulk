@@ -5,7 +5,7 @@ import ABI from '../ContractABI';
 import { ClipLoader } from "react-spinners";
 
 function WinSale() {
-  const [isTokenSale, setIsTokenSale] = useState(true);
+  const [isTokenSale, setIsTokenSale] = useState();
   const [bnbInputValue, setBnbInputValue] = useState("");
   const [wbukInputValue, setWbukInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
