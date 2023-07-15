@@ -20,14 +20,15 @@ function Table() {
   const fetchTopHoldersData = async () => {
     try {
       const holders = await contract.getTopTokenHolders();
-
+  
       const topHoldersData = [];
       for (let i = 0; i < holders.length; i++) {
         const wallet = holders[i];
         const balance = await contract.balanceOf(wallet);
         const balanceInEth = ethers.utils.formatUnits(balance, 18); // Divide balance by 10^18
         const rank = i + 1;
-        topHoldersData.push({ rank, wallet, balance: balanceInEth });
+  
+        topHoldersData.push({ rank, wallet, balance: balanceInEth, status: 'Earning BNB' });
       }
       setTopHolders(topHoldersData);
       setLoading(false);
@@ -36,13 +37,14 @@ function Table() {
       console.error('Error fetching top holders data:', error);
     }
   };
+  
 
   useEffect(() => {
     fetchTopHoldersData(); // Fetch the data initially
 
     const interval = setInterval(() => {
       fetchTopHoldersData(); // Fetch the data at a regular interval (e.g., 1 minute)
-    }, 60000); // 1 minute interval (adjust as needed)
+    }, 10000); // 1 minute interval (adjust as needed)
 
     return () => {
       clearInterval(interval); // Clear the interval when the component is unmounted
@@ -69,8 +71,8 @@ function Table() {
       width: '150px',
     },
     {
-      name: 'Earned',
-      selector: (row) => row.earned,
+      name: 'Status',
+      selector: (row) => row.status,
       sortable: true,
       width: '150px',
     },
@@ -104,7 +106,7 @@ function Table() {
         {loading ? (
           <div className='text-center'>
             <ClipLoader color={"#ffffff"} loading={loading} size={35} />
-            <p>Loading data... Please wait a minute while we load the Top Holders Table.</p>
+            <p>Please wait a minute while we load the Top Holders Table.</p>
           </div>
         ) : topHolders.length > 0 ? (
           <div className="custom-table-container">

@@ -95,7 +95,7 @@ function NavBar() {
             )}
           </ul>
           <a href="https://t.me/OfficialWinbulk" target="_blank" className="social-link"><FaTelegram size={25} /></a>
-          <a href="https://twitter.com/oldWinbulk" target="_blank" className="social-link"><FaTwitter size={25} /></a>
+          <a href="https://twitter.com/Winbulk_Token" target="_blank" className="social-link"><FaTwitter size={25} /></a>
           <a href="https://www.facebook.com/OfficialWinBulk" target="_blank" className="social-link"><FaFacebook size={25} /></a>
           <a href="https://discord.gg/u2KmT4UuJN" target="_blank" className="social-link"><FaDiscord size={25} /></a>
           <a href="https://www.linkedin.com/company/winbulk" target="_blank" className="social-link"><FaLinkedin size={25} /></a>

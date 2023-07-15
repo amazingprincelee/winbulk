@@ -37,7 +37,7 @@ function Ecosystem() {
         <div className="ecosystem-row">
           <div className="util-column">
             <h1 className="util-title">WINBULK SALES</h1>
-            <StatusBtn status="80% Completed" />
+            <StatusBtn status="100% Completed" />
             <p>
               Introducing Win Sale: A groundbreaking decentralized utility
               reshaping investment strategies. Its cutting-edge self-propelling
@@ -53,7 +53,7 @@ function Ecosystem() {
           </div>
           <div className="util-column">
             <h1 className="util-title">WINPLAY</h1>
-            <StatusBtn status="5% Completed" />
+            <StatusBtn status="20% Completed" />
             <p>
               Unleash the Power of Chance With WinPlay, users have the ability
               to create and participate our intuitive WinPlay decentralized
@@ -68,7 +68,7 @@ function Ecosystem() {
           </div>
           <div className="util-column">
             <h1 className="util-title"> DAPP Services</h1>
-            <StatusBtn status="10% Completed" />
+            <StatusBtn status="50% Completed" />
             <p>
               Our innovative Dapp Services is dedicated to helping individuals and
               businesses create and enhance their own utilities, while also

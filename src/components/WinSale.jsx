@@ -15,7 +15,7 @@ function WinSale() {
   const handleChangeBnbInput = (e) => {
     const bnbValue = e.target.value;
     setBnbInputValue(bnbValue);
-    const wbukValue = bnbValue / conversionRate;
+    const wbukValue = (bnbValue / conversionRate) * 0.85; // Deducting 15%
     setWbukInputValue(wbukValue);
   };
 
@@ -57,7 +57,7 @@ function WinSale() {
       }
     } else {
       console.error(
-        "MetaMask not detected. Please install MetaMask to interact with the contract."
+        "MetaMask or compatible wallet not detected. Please install MetaMask or use a compatible wallet to interact with the contract."
       );
     }
   };
