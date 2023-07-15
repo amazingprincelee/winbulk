@@ -13,16 +13,16 @@ const Roadmap = () => {
               <li>Web App Launch <FaCheck /></li>
               <li>Airdrop & Community Growth Initiatives <FaCheck /></li>
               <li>Launch of Social Media Campaign <FaCheck /></li>
-              <li>Expansion of Web App Features</li>
+              <li>Expansion of Features <FaCheck /></li>
             </ul>
           </div>
           <div className="roadmap-item">
           <h2>Stage 2: WinBulk Sales & Expansion</h2>
             <ul>
-              <li>WinBulk Sales (First Utility Launch)</li>
+              <li>WinBulk Sales </li>
               <li>Listed on Pancakeswap Exchange</li>
-              <li>Introduction of Second Utility Feature</li>
-              <li>Integration with Payment Gateway</li>
+              <li>Winplay (Web3)</li>
+              <li>Audit</li>
             </ul>
           </div>
         </div>
@@ -32,7 +32,7 @@ const Roadmap = () => {
           <h2>Stage 3: Growth and Partnerships</h2>
             <ul>
               <li>Coinmarketcap & Coingecko Listing</li>
-              <li>Airdrop & Community Growth Strategies</li>
+              <li>Winplay (Web2)</li>
               <li>Engagement in Community Events</li>
               <li>Establishment of Partnerships with Renowned Projects</li>
             </ul>
@@ -40,10 +40,10 @@ const Roadmap = () => {
           <div className="roadmap-item">
             <h2>Stage 4: Enhancing Connectivity</h2>
             <ul>
-              <li>WinPlay Launch</li>
+              <li>Introduction of Winbulk Dapp development Services (WDD SERVICES)</li>
               <li>Active Participation in Community Events</li>
               <li>Implementation of Cross-Chain Solutions</li>
-              <li>Introduction of Winbulk Dapp development Services (WDD SERVICES)</li>
+              <li>Dapp Services launch</li>
             </ul>
           </div>
         </div>

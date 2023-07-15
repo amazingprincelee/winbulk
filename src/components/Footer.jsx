@@ -10,7 +10,7 @@ function Footer() {
             <img src={logo} alt="logo" className="img-fluid mb-3" />
             <p>
               Maximize the potential of your cryptocurrency with our exclusive
-              features: WIN Staking, WIN SWAP, and WIN LOTTERY. Our
+              features: WINBULK SALES, WINPLAY, DAPP SERVICES etc. Our
               user-friendly platform empowers you to earn lucrative rewards by
               becoming one of the top holders of our tokens. Seize this
               opportunity to optimize your holdings and unlock substantial
@@ -22,16 +22,16 @@ function Footer() {
             <h1>UTILITIES</h1>
             <ul className="list-unstyled">
               <li>
-                <a href="https://#">LOTTERY</a>
+                <a href="https://#">WINBULK SALES</a>
               </li>
               <li>
-                <a href="https://#">STAKING</a>
+                <a href="https://#">WINPLAY</a>
               </li>
               <li>
-                <a href="https://#">SWAP</a>
+                <a href="https://#">DAPP SERVICE</a>
               </li>
               <li>
-                <a href="https://#">LAUNCH PAD</a>
+                <a href="https://#">SWAP & STAKING</a>
               </li>
             </ul>
           </div>
@@ -40,7 +40,7 @@ function Footer() {
             <h1>Follow Us</h1>
             <ul className="list-unstyled">
               <li>
-                <a href="https://twitter.com/oldWinbulk" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://twitter.com/Winbulk_Token" target="_blank" rel="noopener noreferrer">Twitter</a>
               </li>
               <li>
                 <a href="https://t.me/OfficialWinbulk" target="_blank" rel="noopener noreferrer">Telegram</a>

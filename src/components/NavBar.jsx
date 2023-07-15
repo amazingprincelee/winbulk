@@ -51,35 +51,35 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
+                to="/LotteryPage"
+                className="nav-link text-light"
+                style={{ fontSize: "16px", margin: "10px" }}
+                onClick={handleNavItemClick}
+              >
+                WINPLAY
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/BlockchainServices"
+                className="nav-link text-light"
+                style={{ fontSize: "16px", margin: "10px" }}
+                onClick={handleNavItemClick}
+              >
+                DAPP SERVICES
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/StakingPage"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
               >
-                WINBULK STAKING
+                STAKING
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/SwapPage"
-                className="nav-link text-light"
-                style={{ fontSize: "16px", margin: "10px" }}
-                onClick={handleNavItemClick}
-              >
-                WINBULK SWAP
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/LotteryPage"
-                className="nav-link active text-light"
-                aria-current="page"
-                style={{ fontSize: "16px", margin: "10px" }}
-                onClick={handleNavItemClick}
-              >
-                WINBULK WINPLAY
-              </Link>
-            </li>
+            
             {isMobileView && (
               <li className="nav-item">
                 <a

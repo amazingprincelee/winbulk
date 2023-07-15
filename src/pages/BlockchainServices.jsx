@@ -12,6 +12,8 @@ function BlockchainServices() {
           <h1 className="text-center status">STATUS: Under Construction</h1>
         </div>
 
+        
+
         <div className="content">
           <h1>ABOUT DAPP SERVICES</h1>
           <p>

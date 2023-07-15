@@ -1,11 +1,6 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 
 function LotteryPage() {
-
-
-
-
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,46 +12,77 @@ function LotteryPage() {
           <h1 className="text-center status">STATUS: Under Construction</h1>
         </div>
 
+        <div className="row" style={{ background: "white" }}>
+          <div className="col-4 play-container">
+            <h6>Numbers Of Players: 10</h6>
+            <h6>Entry: 7</h6>
+            <p>Minimum AMount: 0.1 BNB</p>
+            <input type="number" placeholder="Enter Amount" />
+            <button>Play now</button>
+          </div>
+          <div className="col-4 play-container">
+            <h6>Numbers Of Players: 10</h6>
+            <h6>Entry: 5</h6>
+            <p>Minimum AMount: 0.5 BNB</p>
+            <input type="number" placeholder="Enter Amount" />
+            <button>Play now</button>
+          </div>
+          <div className="col-4 play-container">
+            <h6>Numbers Of Players: 10</h6>
+            <h6>Entry: 3</h6>
+            <p>Minimum AMount: 1 BNB</p>
+            <input type="number" placeholder="Enter Amount" />
+            <button>Play now</button>
+          </div>
+        </div>
+
         <div className="content">
           <h1>About WinPlay</h1>
           <p>
-            On creating this revolutionary WinPlay system. We are committed to
-            delivering an exceptional user experience that will leave our
-            community members delighted.
+            Welcome to WinPlay, where you can unleash the power of chance! Our
+            platform offers users the exciting opportunity to participate in our
+            intuitive WinPlay decentralized application (dApp) system. Here's
+            how it works:
           </p>
           <p>
-            What makes our WinPlay system truly special is its uniqueness. In the
-            vast crypto space, nothing quite like it exists. We have taken great
-            care to ensure that our utility stands out from the crowd, offering an
-            innovative approach to lottery participation.
+            1. Simple and Effortless Entry: Joining a game on WinPlay is a
+            breeze. With just a few clicks, users can enter a game by staking a
+            certain amount of BNB. No complicated procedures or lengthy
+            registration forms — it's as easy as it gets.
           </p>
           <p>
-            While we are eager to share more details about this exciting project,
-            we also understand the importance of maintaining discretion before the
-            official launch. However, rest assured that our team is working
-            tirelessly behind the scenes to bring this groundbreaking concept to
-            life.
+            2. Embrace the Element of Surprise: Once the game entry is complete,
+            the anticipation begins. WinPlay operates on a random selection
+            process, meaning the winner is chosen entirely by chance. It's a
+            fair and unbiased method, ensuring everyone has an equal opportunity
+            to win.
           </p>
           <p>
-            To stay updated on the latest developments and the highly anticipated
-            release date, we encourage you to follow us on our social media
-            platforms. By doing so, you will be among the first to know when our
-            WinPlay system is ready to revolutionize the way our community engages
-            with lotteries.
+            3. Claim Your Reward: When the winner is picked, they will be
+            entitled to a handsome reward. The prize consists of the total
+            amount staked by all participants, minus a small 5% service fee.
+            This fee is crucial to sustain and improve our platform, allowing us
+            to provide you with an outstanding user experience.
           </p>
           <p>
-            Our team comprises professional developers who possess extensive
-            expertise in their field. With their skills and dedication, we are
-            confident that they will create a seamless and secure experience for
-            every user. Their tireless efforts ensure that our WinPlay system will
-            meet the highest standards of quality and performance.
+            4. Transparency and Security: At WinPlay, we prioritize transparency
+            and security. All transactions and random selections are recorded on
+            the blockchain, making them immutable and verifiable. You can trust
+            that every aspect of the process is conducted with integrity and
+            precision.
           </p>
           <p>
-            As we continue to build this main utility, we appreciate the patience
-            and support of our community. Together, we are on the brink of an
-            exciting new chapter in the world of profitable games, and we can't wait to
-            share it with you. Stay tuned for updates and get ready to embark on a
-            unique WinPlay experience like no other.
+            5. Continuous Gaming: The fun never stops at WinPlay. We offer a
+            wide range of games with various entry amounts and rewards. Feel
+            free to explore and engage in multiple games to increase your
+            chances of winning big!
+          </p>
+          <p>
+            6. Social and Community-Oriented: WinPlay is not just a platform;
+            it's a thriving community of like-minded individuals who share a
+            passion for gaming and winning. Join our social channels, interact
+            with fellow players, and stay updated on the latest game releases
+            and special events.
           </p>
         </div>
       </div>

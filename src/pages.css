@@ -488,6 +488,14 @@
   }
 }
 
+/* winplay design */
+
+.play-container {
+  background-image: linear-gradient(to bottom right, #ff6600, #ff8c00);
+  border-radius: 10px;
+  padding: 10px;
+}
+
 
  
   
