@@ -7,7 +7,7 @@ import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import TokenInfo from "./components/TokenInfo";
 import StakingPage from "./pages/StakingPage";
-import WinPlay from "./pages/WinPlay"; 
+import WinPlay from "./pages/WinPlay";
 import SwapPage from "./pages/SwapPage";
 import DappServices from "./pages/DappServices";
 import Roadmap from "./components/RoadMap";

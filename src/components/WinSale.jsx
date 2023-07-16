@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Timer from "./Timer";
 import { ethers } from "ethers";
-import ABI from '../ContractABI';
+import ABI from "../ContractABI";
 import { ClipLoader } from "react-spinners";
 
 function WinSale() {
@@ -20,7 +20,7 @@ function WinSale() {
   };
 
   const handleChangeWbukInput = (e) => {
-    const wbukValue = e.target.value;
+    const wbukValue = parseFloat(e.target.value); // Parse the input string to a floating-point number
     setWbukInputValue(wbukValue);
     const addedWbukValue = wbukValue + wbukValue * 0.15;
     setBnbInputValue(addedWbukValue * conversionRate);
@@ -78,7 +78,7 @@ function WinSale() {
             onChange={handleChangeBnbInput}
             className="caculator-input col-6 text-justify"
             type="number"
-            placeholder="Amount OF BNB"
+            placeholder="Amount. OF BNB"
             value={bnbInputValue}
             style={{ borderRadius: "5px", padding: "5px" }}
           />
