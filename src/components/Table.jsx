@@ -6,7 +6,7 @@ import ClipLoader from 'react-spinners/ClipLoader';
 
 function Table() {
   const rpcUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
-  const myContractAddress = '0xE92872FD590E1888e4B74bFAe8f400A92ac8925A';
+  const myContractAddress = '0x89fc8888061c1AA3978391b74ce8eCeD63b0d0c3';
 
  
   

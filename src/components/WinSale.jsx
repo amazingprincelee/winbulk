@@ -38,7 +38,7 @@ function WinSale() {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
 
-        const contractAddress = "0xE92872FD590E1888e4B74bFAe8f400A92ac8925A";
+        const contractAddress = "0x89fc8888061c1AA3978391b74ce8eCeD63b0d0c3";
         const contractABI = ABI;
         const contract = new ethers.Contract(
           contractAddress,
