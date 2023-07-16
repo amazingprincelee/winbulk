@@ -6,7 +6,7 @@ import contractAbi from "../ContractABI";
 
 function TokenInfo() {
   const rpcUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
-  const myContractAddress = '0x49909799Aeb375A3f62CbBae5186C513CEceE4B6';
+  const myContractAddress = '0xE92872FD590E1888e4B74bFAe8f400A92ac8925A';
 
   const [bnbTokenPrice, setBnbTokenPrice] = useState("0");
   const [hardCap, setHardCap] = useState("0");
