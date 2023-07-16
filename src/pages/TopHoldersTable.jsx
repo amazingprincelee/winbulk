@@ -3,7 +3,7 @@ import Table from "../components/Table";
 
 function TopHoldersTable() {
   const handleCopyAddress = () => {
-    const address = "0x49909799Aeb375A3f62CbBae5186C513CEceE4B6";
+    const address = "0xE92872FD590E1888e4B74bFAe8f400A92ac8925A";
     navigator.clipboard.writeText(address);
     alert("Contract address copied to clipboard!");
   };
@@ -42,7 +42,7 @@ function TopHoldersTable() {
             <div className="address-container text-center">
               <div className="address-copy">
                 <span className="contract-address">
-                  0x49909799Aeb375A3f62CbBae5186C513CEceE4B6
+                0xE92872FD590E1888e4B74bFAe8f400A92ac8925A
                 </span>
                 <button onClick={handleCopyAddress} className="copy-button">
                   Copy Contract Address

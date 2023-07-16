@@ -15,24 +15,24 @@ function WinPlay() {
         <div className="row" style={{ background: "white" }}>
           <div className="col-4 play-container">
             <h6>Numbers Of Players: 10</h6>
-            <h6>Entry: 7</h6>
+            <h6>Entrie: 7</h6>
             <p>Minimum AMount: 0.1 BNB</p>
             <input type="number" placeholder="Enter Amount" />
-            <button>Play now</button>
+            <button>Enter</button>
           </div>
           <div className="col-4 play-container">
             <h6>Numbers Of Players: 10</h6>
-            <h6>Entry: 5</h6>
+            <h6>Entrie: 5</h6>
             <p>Minimum AMount: 0.5 BNB</p>
             <input type="number" placeholder="Enter Amount" />
-            <button>Play now</button>
+            <button>Enter</button>
           </div>
           <div className="col-4 play-container">
             <h6>Numbers Of Players: 10</h6>
-            <h6>Entry: 3</h6>
+            <h6>Entrie: 3</h6>
             <p>Minimum AMount: 1 BNB</p>
             <input type="number" placeholder="Enter Amount" />
-            <button>Play now</button>
+            <button>Enter</button>
           </div>
         </div>
 

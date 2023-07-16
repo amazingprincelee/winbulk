@@ -32,7 +32,7 @@ const Roadmap = () => {
           <h2>Stage 3: Growth and Partnerships</h2>
             <ul>
               <li>Coinmarketcap & Coingecko Listing</li>
-              <li>Winplay (Web2)</li>
+              <li>Winplay Expansion</li>
               <li>Engagement in Community Events</li>
               <li>Establishment of Partnerships with Renowned Projects</li>
             </ul>
