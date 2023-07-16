@@ -94,7 +94,7 @@ function WinSale() {
             onChange={handleChangeBnbInput}
             className="caculator-input col-6 text-justify"
             type="number"
-            placeholder="Amount. OF BNB"
+            placeholder="Minimum 0.1 BNB"
             value={bnbInputValue}
             style={{ borderRadius: "5px", padding: "5px" }}
           />
