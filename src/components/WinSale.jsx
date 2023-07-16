@@ -3,6 +3,8 @@ import Timer from "./Timer";
 import { ethers } from "ethers";
 import ABI from "../ContractABI";
 import { ClipLoader } from "react-spinners";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function WinSale() {
   const [isTokenSale, setIsTokenSale] = useState(true);
@@ -50,8 +52,10 @@ function WinSale() {
         await tx.wait();
 
         console.log("Investment successful!");
+        toast.success("Investment successful!");
       } catch (error) {
         console.error(error);
+        toast.error("An error occurred during the investment.");
       } finally {
         setIsLoading(false);
       }
@@ -59,12 +63,24 @@ function WinSale() {
       console.error(
         "MetaMask or compatible wallet not detected. Please install MetaMask or use a compatible wallet to interact with the contract."
       );
+      toast.error("MetaMask or compatible wallet not detected.");
     }
   };
 
   const handleButtonClick = () => {
+    // Additional conditions for toast notifications
     if (!isLoading) {
-      handleInvest();
+      if (!isTokenSale) {
+        toast.warn("Sales have not started.");
+      } else if (!bnbInputValue || parseFloat(bnbInputValue) <= 0) {
+        toast.error("Please enter a valid amount of BNB.");
+      } else if (parseFloat(bnbInputValue) < 0.1) {
+        toast.error("Minimum investment is 0.1 BNB.");
+      } else if (!wbukInputValue || parseFloat(wbukInputValue) <= 0) {
+        toast.error("Please enter a valid amount of WBUK.");
+      } else {
+        handleInvest();
+      }
     }
   };
 
@@ -103,6 +119,7 @@ function WinSale() {
           </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
