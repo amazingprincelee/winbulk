@@ -74,10 +74,6 @@ function TokenInfo() {
                   <td>{amountRaised} BNB</td>
                 </tr>
                 <tr>
-                  <td>AMOUNT SOLD</td>
-                  <td> </td>
-                </tr>
-                <tr>
                   <td>MAX INVESTMENT</td>
                   <td>{maxInvestment} BNB</td>
                 </tr>

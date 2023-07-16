@@ -51,7 +51,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/LotteryPage"
+                to="/lotterypage"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
@@ -61,7 +61,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/BlockchainServices"
+                to="/blockchainservices"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
@@ -71,7 +71,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/StakingPage"
+                to="/stakingpage"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}

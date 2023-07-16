@@ -9,7 +9,7 @@ function Header() {
   const history = useHistory(); // Get the history object from react-router-dom
 
   const handleClick = () => {
-    history.push("/TopHoldersTable"); // Navigate to the "top holders" page
+    history.push("/topholderstable"); // Navigate to the "top holders" page
   };
 
   const handleClose = () => {
