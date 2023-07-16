@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function BlockchainServices() {
+function DappServices() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -56,4 +56,4 @@ function BlockchainServices() {
   );
 }
 
-export default BlockchainServices;
+export default DappServices;

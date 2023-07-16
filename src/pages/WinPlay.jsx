@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function LotteryPage() {
+function WinPlay() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -90,4 +90,4 @@ function LotteryPage() {
   );
 }
 
-export default LotteryPage;
+export default WinPlay;

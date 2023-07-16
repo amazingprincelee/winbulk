@@ -51,7 +51,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/lotterypage"
+                to="/winplay"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
@@ -61,7 +61,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                to="/blockchainservices"
+                to="/dappservices"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}

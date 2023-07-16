@@ -7,9 +7,9 @@ import Ecosystem from "./components/Ecosystem";
 import Footer from "./components/Footer";
 import TokenInfo from "./components/TokenInfo";
 import StakingPage from "./pages/StakingPage";
-import LotteryPage from "./pages/LotteryPage";
+import WinPlay from "./pages/WinPlay"; 
 import SwapPage from "./pages/SwapPage";
-import BlockchainServices from "./pages/BlockchainServices";
+import DappServices from "./pages/DappServices";
 import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
 import TopHoldersTable from "./pages/TopHoldersTable";
@@ -35,8 +35,8 @@ function App() {
             <TokenInfo />
           </div>
         </Route>
-        <Route path="/LotteryPage">
-          <LotteryPage />
+        <Route path="/WinPlay">
+          <WinPlay />
         </Route>
         <Route path="/StakingPage">
           <StakingPage />
@@ -44,8 +44,8 @@ function App() {
         <Route path="/SwapPage">
           <SwapPage />
         </Route>
-        <Route path="/BlockchainServices">
-          <BlockchainServices />
+        <Route path="/DappServices">
+          <DappServices />
         </Route>
         <Route path="/TopHoldersTable">
           <TopHoldersTable />
