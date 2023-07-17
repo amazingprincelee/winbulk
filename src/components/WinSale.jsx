@@ -88,7 +88,6 @@ function WinSale() {
     <div className="container winbuy-container">
       <div className="winbuy-content text-center">
         <h2>WINBULK SALES</h2>
-        <Timer />
         <div className="row">
           <input
             onChange={handleChangeBnbInput}

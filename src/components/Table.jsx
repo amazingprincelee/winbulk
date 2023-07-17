@@ -5,7 +5,7 @@ import ABI from '../ContractABI';
 import ClipLoader from 'react-spinners/ClipLoader';
 
 function Table() {
-  const rpcUrl = 'https://data-seed-prebsc-1-s1.binance.org:8545/';
+  const rpcUrl = 'https://bsc-dataseed.binance.org/';
   const myContractAddress = '0x89fc8888061c1AA3978391b74ce8eCeD63b0d0c3';
 
  
