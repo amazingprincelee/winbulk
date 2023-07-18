@@ -12,7 +12,7 @@ import SwapPage from "./pages/SwapPage";
 import DappServices from "./pages/DappServices";
 import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
-import TopHoldersTable from "./pages/TopHoldersTable";
+import TopHolders from "./pages/TopHolders";
 
 
 
@@ -47,8 +47,8 @@ function App() {
         <Route path="/DappServices">
           <DappServices />
         </Route>
-        <Route path="/TopHoldersTable">
-          <TopHoldersTable />
+        <Route path="/TopHolders">
+          <TopHolders />
         </Route>
       </Switch>
       <Footer />

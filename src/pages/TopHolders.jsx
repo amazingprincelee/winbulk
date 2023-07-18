@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../components/Table";
 
-function TopHoldersTable() {
+function TopHolders() {
   const handleCopyAddress = () => {
     const address = "0x75148f1e1BFF2D47B1e8b67EfB8aBbFd94366971";
     navigator.clipboard.writeText(address);
@@ -56,4 +56,4 @@ function TopHoldersTable() {
   );
 }
 
-export default TopHoldersTable;
+export default TopHolders;

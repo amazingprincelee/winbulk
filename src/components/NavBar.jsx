@@ -38,17 +38,18 @@ function NavBar() {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-            <li className="nav-item">
+
+          <li className="nav-item">
               <Link
-                to="/"
-                className="nav-link active text-light"
-                aria-current="page"
+                to="/topholders"
+                className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
               >
-                HOME
+                Top Holders
               </Link>
             </li>
+            
             <li className="nav-item">
               <Link
                 to="/winplay"
@@ -69,16 +70,7 @@ function NavBar() {
                 DAPP SERVICES
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/stakingpage"
-                className="nav-link text-light"
-                style={{ fontSize: "16px", margin: "10px" }}
-                onClick={handleNavItemClick}
-              >
-                STAKING
-              </Link>
-            </li>
+            
             
             {isMobileView && (
               <li className="nav-item">

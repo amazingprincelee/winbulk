@@ -54,8 +54,8 @@ function Team() {
             <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>Open Position - TECH MAN</h4>
-                <p>Master Of AI/BOT</p>
+                <h4>Adeoye Oluwaseun - WINBULK SPOKEMAN</h4>
+                <p>Winbulk host</p>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ function Team() {
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
                 <h4>Peasy - AMBASSADOR</h4>
-                <p>Winbulk spokesperson.</p>
+                <p>Winbulk Representative.</p>
               </div>
             </div>
           </div>

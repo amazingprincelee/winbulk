@@ -24,7 +24,7 @@ const TokenTable = () => {
 
   return (
     <Table striped bordered hover>
-      <thead>
+      <thead className='text-white'>
         <tr>
           <th>Category</th>
           <th>Value</th>
