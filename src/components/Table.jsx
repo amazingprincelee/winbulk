@@ -130,7 +130,7 @@ function Table() {
             />
           </div>
         ) : (
-          <div className='text-white'>Please wait a minute while we load the Top Holders Table.</div>
+          <div className='text-white'>Please wait a minute while we load Winbulk TopHolders.</div>
         )}
       </div>
     </div>

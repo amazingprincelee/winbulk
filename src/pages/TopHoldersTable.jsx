@@ -22,7 +22,7 @@ function TopHoldersTable() {
       <div className="row">
         <div className="col-lg-6">
           <h1 className="text-center" style={{ color: "white" }}>
-            Top Holders
+            Winbulk TopHolders
           </h1>
           <div className="top-holder-table">
             <Table />
@@ -30,7 +30,7 @@ function TopHoldersTable() {
         </div>
         <div className="col-lg-6">
           <div className="centered-content">
-            <h4>How to Join Top Holder</h4>
+            <h4>How to Join Winbulk TopHolders</h4>
             <ol>
               <li>Log into Your Wallet</li>
               <li>Change your wallet to Binance Smart Chain</li>

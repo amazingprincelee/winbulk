@@ -47,9 +47,9 @@ function TokenInfo() {
     <div className="container token-info">
       <div className="row  token-content">
         <div className="col-md-6 style-top-holder">
-          <h1 className="text-center">Top Holders Table</h1>
+          <h1 className="text-center"> Winbulk TopHolders</h1>
           <p className="text-center">
-            TO ENTER THE TOP HOLDER AND GET REWARDED.
+            TO ENTER WINBULK TOP HOLDERS AND GET REWARDED.
             <br /> Buy more WBUK token to enter or maintain your rank
           </p>
           <div className="">
@@ -66,7 +66,7 @@ function TokenInfo() {
                   <td>{bnbTokenPrice} BNB</td>
                 </tr>
                 <tr>
-                  <td>HARDCAP</td>
+                  <td>Target</td>
                   <td>{hardCap} BNB</td>
                 </tr>
                 <tr>
