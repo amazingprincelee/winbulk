@@ -54,8 +54,8 @@ function Team() {
             <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>Adeoye Oluwaseun - WINBULK SPOKEMAN</h4>
-                <p>Winbulk host</p>
+                <h4>Adeoye Oluwaseun - SPOKEMAN</h4>
+                <p>Event Manager/Host</p>
               </div>
             </div>
           </div>
