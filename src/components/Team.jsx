@@ -65,8 +65,8 @@ function Team() {
           <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>Peasy - AMBASSADOR</h4>
-                <p>Winbulk Representative</p>
+                <h4>Rasta - BOT MASTER</h4>
+                <p>Coding Bots</p>
               </div>
             </div>
           </div>
