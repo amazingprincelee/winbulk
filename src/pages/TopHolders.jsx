@@ -41,7 +41,7 @@ function TopHolders() {
 
             <div className=" text-center">
               <div className="address-copy">
-                <p className="contract-address">
+                <p>
                 0x75148f1e1BFF2D47B1e8b67EfB8aBbFd94366971
                 </p>
                 <button onClick={handleCopyAddress} className="copy-button">
