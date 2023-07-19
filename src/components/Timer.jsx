@@ -7,7 +7,8 @@ const Timer = () => {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    const countdownDate = new Date('July 17, 2023 10:00:00').getTime(); // Updated countdown date and time
+    // Updated countdown date and time - Wed Aug 16 2023 17:37:02 GMT+0000
+    const countdownDate = new Date('August 16, 2023 17:37:02 GMT+0000').getTime();
 
     const updateTimer = setInterval(() => {
       const now = new Date().getTime();
@@ -38,7 +39,7 @@ const Timer = () => {
   return (
     <div>
       <div className='row timer-row'>
-        <h6 className='timer-label'>WBUK SALES TO BEGIN IN</h6>
+        <h6 className='timer-label'>PancakeSwap Listing</h6>
         <div className='col time-case'>{days} <p>DAY</p></div>
         <div className='col time-case'>{hours} <p>HOUR</p></div>
         <div className='col time-case'>{minutes} <p>MINUTES</p></div>

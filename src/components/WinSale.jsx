@@ -6,6 +6,7 @@ import { ClipLoader } from "react-spinners";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 function WinSale() {
   const [isTokenSale, setIsTokenSale] = useState(true);
   const [bnbInputValue, setBnbInputValue] = useState("");
@@ -87,7 +88,8 @@ function WinSale() {
   return (
     <div className="container winbuy-container">
       <div className="winbuy-content text-center">
-        <h2>WINBULK SALES</h2>
+        <h2>SALES ENDS</h2>
+        <Timer />
         <div className="row">
           <input
             onChange={handleChangeBnbInput}
