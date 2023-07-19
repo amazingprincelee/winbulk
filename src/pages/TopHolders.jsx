@@ -14,7 +14,7 @@ function TopHolders() {
         <div className="advertisement">
           <div className="advertisement-content">
             <span className="advertisement-message">
-              Advertise Here: Advertisement Cost 21,250,000 WBUK
+              Advertise Here
             </span>
           </div>
         </div>
@@ -39,11 +39,11 @@ function TopHolders() {
               <li>Add/Import WBUK Token to your wallet with the contract address</li>
             </ol>
 
-            <div className="address-container text-center">
+            <div className=" text-center">
               <div className="address-copy">
-                <span className="contract-address">
+                <p className="contract-address">
                 0x75148f1e1BFF2D47B1e8b67EfB8aBbFd94366971
-                </span>
+                </p>
                 <button onClick={handleCopyAddress} className="copy-button">
                   Copy Contract Address
                 </button>

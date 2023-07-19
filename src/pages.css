@@ -441,16 +441,6 @@
   text-decoration: none;
 }
 
-.address-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.address-copy {
-  display: flex;
-  align-items: center;
-}
 
 .contract-address {
   margin-right: 10px;

@@ -55,7 +55,7 @@ function Team() {
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
                 <h4>Adeoye Oluwaseun - SPOKEMAN</h4>
-                <p>Event Manager/Host</p>
+                <p>Brand Manager & Event Host</p>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ function Team() {
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
                 <h4>Peasy - AMBASSADOR</h4>
-                <p>Winbulk Representative.</p>
+                <p>Winbulk Representative</p>
               </div>
             </div>
           </div>
