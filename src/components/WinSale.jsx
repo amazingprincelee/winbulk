@@ -88,7 +88,7 @@ function WinSale() {
   return (
     <div className="container winbuy-container">
       <div className="winbuy-content text-center">
-        <h2>SALES ENDS</h2>
+        
         <Timer />
         <div className="row">
           <input
