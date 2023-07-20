@@ -14,6 +14,7 @@ import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
 import TopHolders from "./pages/TopHolders";
 import HowToBuy from "./pages/HowToBuy";
+import JobApplication from "./pages/JobApplication";
 
 
 
@@ -53,6 +54,9 @@ function App() {
         </Route>
         <Route path="/HowToBuy">
           <HowToBuy />
+        </Route>
+        <Route path="/JobApplication">
+          <JobApplication />
         </Route>
       </Switch>
       <Footer />

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function HowToBuy() {
   const salesAddress = "0x75148f1e1BFF2D47B1e8b67EfB8aBbFd94366971"; // Replace this with the actual sales address
 
-  const [copyStatus, setCopyStatus] = useState("Copy");
+  const [copyStatus, setCopyStatus] = useState("Copy contract address");
 
   const handleCopy = () => {
     navigator.clipboard.writeText(salesAddress);
@@ -19,10 +19,8 @@ function HowToBuy() {
           <ul>
             <li>Log into your Wallet (Metamask/TrustWallet)</li>
             <li>Change your network to Smart Chain network</li>
-            <li>
-              Copy Sales address
+            <li className="mt-2 mb-2">
               <div className="d-flex align-items-center">
-                <span className="mr-2">{salesAddress}</span>
                 <button
                   className="btn btn-primary"
                   onClick={handleCopy}
@@ -47,10 +45,9 @@ function HowToBuy() {
           <ul>
             <li>Log into your Wallet (Metamask/TrustWallet)</li>
             <li>Change your network to Smart Chain network</li>
-            <li>
-              Copy Sales address
+            <li className="mt-2 mb-2">
+             
               <div className="d-flex align-items-center">
-                <span className="mr-2">{salesAddress}</span>
                 <button
                   className="btn btn-primary"
                   onClick={handleCopy}

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../images/logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -54,6 +55,7 @@ function Footer() {
           <div className="col-md-6 col-lg-3 mb-4">
             <h1>CONTACT US</h1>
             <p>Email: team@winbulk.com</p>
+            <Link to="/jobapplication">Career</Link>
           </div>
         </div>
 
