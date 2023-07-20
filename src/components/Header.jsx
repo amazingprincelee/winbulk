@@ -31,9 +31,9 @@ function Header() {
 
               <p className="desc">
                 WinBulk introduces a groundbreaking token presale system, known
-                as WINBULK SALES, which sets a new standard in effectiveness and
+                as WINBULK TopHolders, which sets a new standard in effectiveness and
                 self-propulsion, incorporating a unique and lucrative pair
-                lottery system that generates significant profits.
+                Winplay that generates significant profits.
               </p>
 
               <div className="header-action-btn">
