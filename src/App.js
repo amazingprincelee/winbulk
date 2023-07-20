@@ -13,6 +13,7 @@ import DappServices from "./pages/DappServices";
 import Roadmap from "./components/RoadMap";
 import Team from "./components/Team";
 import TopHolders from "./pages/TopHolders";
+import HowToBuy from "./pages/HowToBuy";
 
 
 
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route path="/TopHolders">
           <TopHolders />
+        </Route>
+        <Route path="/HowToBuy">
+          <HowToBuy />
         </Route>
       </Switch>
       <Footer />

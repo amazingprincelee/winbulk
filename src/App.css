@@ -149,13 +149,16 @@ footer {
   color: white;
   font-size: 1rem;
   margin-bottom: 10px;
+  margin-right: 2px;
 }
 
-.whitepaper {
+.how-buy {
   margin-left: 10px;
   font-size: 1rem;
   color: white;
   text-decoration: none;
+  border: 1px solid brown;
+  padding: 5px;
 }
 
 @media (min-width: 768px) {
@@ -206,6 +209,8 @@ footer {
     margin-left: 50px;
   }
 }
+
+
 
 
 /* End of styling Heading area */

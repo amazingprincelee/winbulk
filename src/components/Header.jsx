@@ -8,8 +8,12 @@ function Header() {
   const [showMessage, setShowMessage] = useState(false);
   const history = useHistory(); // Get the history object from react-router-dom
 
-  const handleClick = () => {
+  const handleClick1 = () => {
     history.push("/topholders"); // Navigate to the "top holders" page
+  };
+
+  const handleClick2 = () => {
+    history.push("/howtobuy"); // Navigate to the "top holders" page
   };
 
   const handleClose = () => {
@@ -37,16 +41,13 @@ function Header() {
               </p>
 
               <div className="header-action-btn">
-                <button className="action-btn" onClick={handleClick}>
-                  TOP HOLDERS TABLE
+                <button className="action-btn" onClick={handleClick1}>
+                  TOP HOLDERS
                 </button>
-                <a
-                  className="whitepaper"
-                  href="https://winbulk.com/doc/whitepaper.pdf"
-                  target="_blank"
-                >
-                  WHITEPAPER
-                </a>
+                <button className="action-btn" onClick={handleClick2}>
+                  HOW TO BUY
+                </button>
+                
               </div>
 
               {showMessage && (
