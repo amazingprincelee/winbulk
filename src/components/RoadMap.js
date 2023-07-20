@@ -19,7 +19,7 @@ const Roadmap = () => {
           <div className="roadmap-item">
           <h2>Stage 2: WinBulk Sales & Expansion</h2>
             <ul>
-              <li>WinBulk Sales </li>
+              <li>WinBulk Sales <FaCheck /></li>
               <li>Listed on Pancakeswap Exchange</li>
               <li>Winplay (Web3)</li>
               <li>Audit</li>
