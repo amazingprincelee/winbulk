@@ -75,8 +75,8 @@ function WinSale() {
         toast.warn("Sales have not started.");
       } else if (!bnbInputValue || parseFloat(bnbInputValue) <= 0) {
         toast.error("Please enter a valid amount of BNB.");
-      } else if (parseFloat(bnbInputValue) < 0.1) {
-        toast.error("Minimum investment is 0.1 BNB.");
+      } else if (parseFloat(bnbInputValue) < 0.01) {
+        toast.error("Minimum investment is 0.01 BNB.");
       } else if (!wbukInputValue || parseFloat(wbukInputValue) <= 0) {
         toast.error("Please enter a valid amount of WBUK.");
       } else {
@@ -95,7 +95,7 @@ function WinSale() {
             onChange={handleChangeBnbInput}
             className="caculator-input col-6 text-justify"
             type="number"
-            placeholder="Minimum 0.1 BNB"
+            placeholder="Minimum 0.01 BNB"
             value={bnbInputValue}
             style={{ borderRadius: "5px", padding: "5px" }}
           />

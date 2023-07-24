@@ -32,8 +32,8 @@ function Team() {
             <div className="team-details">
               <img src={teamMember} alt="" />
               <div style={{ padding: "20px" }}>
-                <h4>LIZ - COO</h4>
-                <p>Streamlining and coordinating all operational processes with precision and efficiency. Human Relations (HR).</p>
+                <h4>LIZ - CO FOUNDER/COO</h4>
+                <p>Streamlining and coordinating all operation.</p>
               </div>
             </div>
           </div>

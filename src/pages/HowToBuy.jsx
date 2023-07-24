@@ -32,7 +32,7 @@ function HowToBuy() {
             </li>
             <li>Send BNB to Sales Address.</li>
             <li>Select I understand (Metamask Desktop)</li>
-            <li>Send BNB (Minimum investment is 0.1)</li>
+            <li>Send BNB (Minimum investment is 0.01)</li>
             <li>Send BNB</li>
             <li>Add token to wallet with sales address</li>
           </ul>
@@ -59,7 +59,7 @@ function HowToBuy() {
             </li>
             <li>Send BNB to Sales Address.</li>
             <li>Select I understand (Metamask Desktop)</li>
-            <li>Send BNB (Minimum investment is 0.1)</li>
+            <li>Send BNB (Minimum investment is 0.01)</li>
             <li>Send BNB</li>
             <li>Add token to wallet with sales address</li>
           </ul>

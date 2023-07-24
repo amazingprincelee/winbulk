@@ -56,7 +56,9 @@ function Footer() {
             <h1>CONTACT US</h1>
             <p>Email: team@winbulk.com</p>
             <Link to="/jobapplication">Career</Link>
+            
           </div>
+          <a className="whitepaper" href="https://winbulk.com/doc/whitepaper.pdf">White Paper</a>
         </div>
 
         <div className="container copywrite">
