@@ -4,12 +4,47 @@ function HowToBuy() {
   const salesAddress = "0x75148f1e1BFF2D47B1e8b67EfB8aBbFd94366971"; // Replace this with the actual sales address
 
   const [copyStatus, setCopyStatus] = useState("Copy contract address");
-
+  const [currentAccount, setCurrentAccount] = useState("");
   const handleCopy = () => {
     navigator.clipboard.writeText(salesAddress);
     setCopyStatus("Copied");
   };
 
+  //check if wallet is connected
+  const checkIfWalletIsConnect = async () => {
+    try {
+      if (!ethereum) return alert("Please install MetaMask.");
+
+      const accounts = await ethereum.request({ method: "eth_accounts" });
+
+      if (accounts.length) {
+        setCurrentAccount(accounts[0]);
+
+  
+      } else {
+        console.log("No accounts found");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // wallet connect
+  const connectWallet = async () => {
+    try {
+      if (!ethereum) return alert("Please install MetaMask.");
+
+      const accounts = await ethereum.request({ method: "eth_requestAccounts", });
+
+      setCurrentAccount(accounts[0]);
+      // window.location.reload();
+    } catch (error) {
+      console.log(error);
+
+      throw new Error("No ethereum object");
+    }
+  };
+   
   return (
     <div className="container mt-5 mb-5 text-white">
       <div className="row justify-content-center">
@@ -18,6 +53,13 @@ function HowToBuy() {
           <h3>HOW TO BUY (Method ONE) (Recommended)</h3>
           <ul>
             <li>Log into your Wallet (Metamask/TrustWallet)</li>
+            <li>  
+            {currentAccount ? (
+        <p>Connected Account: {currentAccount}</p>
+      ) : (
+        <button onClick={connectWallet}>Connect Wallet</button>
+      )}
+            </li>
             <li>Change your network to Smart Chain network</li>
             <li className="mt-2 mb-2">
               <div className="d-flex align-items-center">
@@ -44,6 +86,14 @@ function HowToBuy() {
           <h3>HOW TO BUY (Method TWO) (Alternative)</h3>
           <ul>
             <li>Log into your Wallet (Metamask/TrustWallet)</li>
+          <li>
+              
+              {currentAccount ? (
+          <p>Connected Account: {currentAccount}</p>
+        ) : (
+          <button onClick={connectWallet}>Connect Wallet</button>
+        )}
+              </li>
             <li>Change your network to Smart Chain network</li>
             <li className="mt-2 mb-2">
              
