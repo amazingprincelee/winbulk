@@ -1,0 +1,562 @@
+
+/* start of swap form styling */
+
+.swap-form {
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.token-1-selector, .token-2-selector {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)),
+              linear-gradient(-45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+              rgba(24, 24, 24, 0.9);
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+
+.token-selector, .swap-form-balance {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.swap-form p {
+  font-size: 1.5rem;
+}
+
+.token-1-btn {
+  border-radius: 20px;
+  padding: 4px;
+}
+
+.token-2-btn {
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  border-radius: 20px;
+  padding: 4px;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.toggle-icon {
+  background: none;
+  margin: 10px;
+  border-radius: 50px;
+  box-shadow: 3px 3px;
+}
+
+
+
+.connect2wallet-btn{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 2rem;
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  color: white;
+}
+
+.connect2wallet-btn:hover, .toggle-icon:hover {
+  background: lightgreen;
+  color: #060606;
+}
+
+
+
+
+
+/* End of swap form styling */
+
+
+/* Start sales timer styling */
+
+.time-case {
+  background-image: linear-gradient(to right, #FFA500, #FF4500);
+  margin: 5px;
+  padding: 10px;
+  width: 15%;
+}
+
+/* Media queries for adjusting timer size */
+
+@media (max-width: 768px) {
+  .time-case {
+    width: 20% !important;
+    font-size: 12px;
+    padding: 5px;
+
+   
+  }
+
+  .time-case p {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .time-case {
+    width: 10% !important;
+    font-size: 10px;
+    padding: 3px;
+  }
+}
+
+/* End sales timer styling */
+
+.status-container {
+  border-radius: 10px;
+  border: 2px black solid;
+}
+
+@media screen and (max-width: 768px) {
+  .lottery-page div {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+.timer-label {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.time-case {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer-row {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* End timer component styling */
+
+
+
+/* Start lottery page styling */
+
+.lottery-page {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.lottery-page div {
+  margin: auto;
+  max-width: 700px;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* End Lottery page styling */
+
+
+
+
+
+
+
+.stake-container{
+  margin-top: 40px;
+  
+}
+
+.swap-page-container{
+  margin-top: 80px;
+  margin-bottom: 50px;
+  
+}
+
+
+.staking-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+  
+  .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  
+
+  .news-update {
+    border: 2px orange solid;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    height: 120px;
+    width: 340px;
+    
+  }
+  
+  
+  .staking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+
+  .transfer-form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    padding: 20px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 1 rem;
+    color: white
+  }
+  
+  .box-showdown {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  
+  .percentage-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .col-3-lg {
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, #f6c324, #fdb813);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .col-3-lg p:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .col-3-lg p:last-child {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  
+ 
+
+
+  .percentage-button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+  }
+
+  .percentage-button:hover {
+    background-color: orange;
+    color: black;
+  }
+  
+  .percentage-button:last-child {
+    margin-right: 0;
+  }
+
+
+  .submit-button {
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 300px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-image: linear-gradient(to bottom right, #ff6600, #ff8c00);
+    transition: all 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #060606;
+    color: #f2f2f2;
+  }
+
+
+  /* carousel styling */
+
+  .carousel .carousel-item {
+    
+   
+    
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-indicators li {
+  background-color: #ffffb3; /* Change this to your desired light yellow color */
+}
+
+
+  .carousel-item img {
+    height: 100%;
+    object-fit: contain;
+    margin-right: 20px;
+  }
+  
+  .carousel-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .carousel-item p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+
+  @media only screen and (max-width: 767px) {
+    .carousel {
+      display: none;
+    }
+
+    .token-balance {
+      width: 100%;
+      }
+  }
+
+  
+  .carousel {
+    display: none; /* hide on mobile devices */
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .carousel {
+      display: block; /* show on desktop devices */
+    }
+  }
+
+
+ /* Top table page styling */
+ .space-above {
+  margin-top: 20px;
+}
+
+.advertisement-area {
+ 
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.advertisement {
+  background-color: #2aa198;
+  padding: 10px;
+  animation: moveLeftRight 10s infinite linear;
+}
+
+.advertisement-content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.advertisement-message {
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+}
+
+.centered-content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.centered-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.centered-content ol {
+  list-style-type: decimal;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 0;
+}
+
+.centered-content ol li {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.copy-address {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.copy-address:hover {
+  text-decoration: none;
+}
+
+
+.contract-address {
+  margin-right: 10px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.copy-button {
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background-color: #FF4500;
+}
+
+.top-holder-table {
+  border: #FF4500 1px solid;
+  border-radius: 20px;
+}
+
+
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* winplay design */
+
+.play-container {
+  background-image: linear-gradient(to bottom right, #ff6600, #ff8c00);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
+
+/* how to buy style area */
+/* .copy-btn {
+  padding: 2px;
+  margin-left: 2px;
+} */
+
+.custom-margin {
+  margin-top: 100px;
+}
+ 
+
+/* application form style */
+.job-app {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.job-app h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.job-app p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.application-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.application-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .job-app {
+    padding: 10px;
+    margin-top: 100px;
+  }
+
+  .job-app h1 {
+    font-size: 24px;
+  }
+
+  .job-app p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .application-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+  
+  
+  
+  
+  
