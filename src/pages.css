@@ -559,4 +559,63 @@
   
   
   
-  
+.listing-column{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5% ;
+  padding: 5%;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+}
+.listing-row{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.listing-row > button{
+  width: 100%;
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #078836 5%, #036b53 100%);
+	background-color:#105756;
+	border-radius:11px;
+	border:2px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:8px 18px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+  margin-top: 5px;
+  height: 48px;
+  /* margin-left: 40px; */
+}
+.listing-row > input{
+  border-radius:11px;
+	border:2px solid #eeb44f;
+  padding-left: 200px;
+  font-size: 15px;
+  height: 48px;
+}
+.listing-connect-buttons{
+  display: flex;
+  flex-direction: row;
+}
+.connected-button-info{
+  display: flex;
+  flex-direction: column;
+}
+.connected-button-info > h2{
+  font-size: 1rem;
+  color: black;
+}
+.connected-button-info  > div{
+  font-size: 12px;
+  /* display: none; */
+}

@@ -4,7 +4,10 @@ import heroeImage from "../images/winbulk-utils.png";
 import WinSale from "./WinSale";
 
 
+
 function Header() {
+
+
   const [showMessage, setShowMessage] = useState(false);
   const history = useHistory(); // Get the history object from react-router-dom
 
@@ -67,7 +70,8 @@ function Header() {
           </div>
         </div>
 
-        <WinSale />
+        <WinSale  />
+        
       </div>
     </div>
   );

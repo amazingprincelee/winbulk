@@ -140,6 +140,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  
 }
 
 .action-btn {
@@ -150,6 +151,10 @@ footer {
   font-size: 1rem;
   margin-bottom: 10px;
   margin-right: 2px;
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  border: none;
+  border-radius:11px;
+	border:2px solid #eeb44f;
 }
 
 .how-buy {
@@ -564,3 +569,26 @@ footer {
 
 
 
+
+
+/* styles.css */
+.connectBtn {
+  /* background-color: blue; */
+  background: none ;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px ;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.disconnectBtn{
+    /* background-color: blue; */
+    background: red ;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px ;
+    margin: 0 5px;
+    cursor: pointer;
+}
