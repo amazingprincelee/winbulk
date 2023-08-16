@@ -31,7 +31,7 @@ function WinSale() {
   );
   // // Set up wagmi config
   const config = createConfig({
-    autoConnect: true,
+    autoConnect: false,
     connectors: [
       new MetaMaskConnector({ 
         chains}),
