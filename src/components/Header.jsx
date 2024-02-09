@@ -33,12 +33,15 @@ function Header() {
                 </p>
               </div>
 
-              <p className="desc">
+              <p className="desc" style={{fontSize: '1rem', textAlign:'justify'}}>
+              WINBULK (WBUK) is an innovative cryptocurrency project built on the Binance Smart Chain (BSC). It aims to disrupt the traditional investment landscape by offering a range of decentralized utilities and empowering users to participate in the Winbulk ecosystem.
+              </p>
+              {/* <p className="desc">
                 WinBulk introduces a groundbreaking token presale system, known
                 as WINBULK TopHolders, which sets a new standard in effectiveness and
                 self-propulsion, incorporating a unique and lucrative pair
                 Winplay that generates significant profits.
-              </p>
+              </p> */}
 
               <div className="header-action-btn">
                 <button className="action-btn" onClick={handleClick1}>

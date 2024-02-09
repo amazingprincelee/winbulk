@@ -58,37 +58,22 @@ function TokenInfo() {
         </div>
         <div className="col-md-6">
           <div className="sales-info">
-            <h1>SALES INFORMATION</h1>
-            <table className="table" style={{ color: "white" }}>
-              <tbody>
-                <tr>
-                  <td>TOKEN PRICE IN BNB</td>
-                  <td>{bnbTokenPrice} BNB</td>
-                </tr>
-                <tr>
-                  <td>Target</td>
-                  <td>{hardCap} BNB</td>
-                </tr>
-                <tr>
-                  <td>AMOUNT RAISED</td>
-                  <td>{amountRaised} BNB</td>
-                </tr>
-                <tr>
-                  <td>MAX INVESTMENT</td>
-                  <td>{maxInvestment} BNB</td>
-                </tr>
-                <tr>
-                  <td>MIN INVESTMENT</td>
-                  <td>{minInvestment} BNB</td>
-                </tr>
-                
-              </tbody>
-            </table>
+            <h1>ABOUT WINBULK</h1>
+            <p>
+            WINBULK (WBUK) is an innovative cryptocurrency project built on the Binance Smart Chain (BSC). It aims to disrupt the traditional investment landscape by offering a range of decentralized utilities and empowering users to participate in the Winbulk ecosystem. With features such as Winbulk TopHolding and benefits, WinPlay, WinStake and other utilities to come, the project strives to provide a comprehensive and rewarding experience to its users.
+            </p>
+
+            <h1>WINBULK HOLDERS</h1>
+
+            <p>
+            As a distinguished member of our community, WINBULK Top Holders are entitled to a portion of the allocated percentage of the base cryptocurrency, currently denominated in BNB. This exclusive privilege ensures that our esteemed top holders receive benefits from every transaction conducted within the Top Holder utility, thereby fostering a mutually rewarding relationship with our platform.
+            </p>
+            
           </div>
-          <div>
-            <h1>Token Distribution</h1>
-            <TokenDistribution />
-          </div>
+          
+            
+            
+          
         </div>
       </div>
     </div>

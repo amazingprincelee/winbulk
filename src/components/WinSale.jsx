@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Timer from "./Timer";
+// import Timer from "./Timer";
 import { ethers } from "ethers";
 import ABI from "../ContractABI";
 import { ClipLoader } from "react-spinners";
@@ -89,7 +89,7 @@ function WinSale() {
     <div className="container winbuy-container">
       <div className="winbuy-content text-center">
         
-        <Timer />
+        {/* <Timer /> */}
         <div className="row">
           <input
             onChange={handleChangeBnbInput}

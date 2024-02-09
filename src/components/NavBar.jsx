@@ -39,44 +39,56 @@ function NavBar() {
         >
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
 
-          <li className="nav-item">
+            <li className="nav-item">
+              <Link
+                to="/"
+                className="nav-link text-light"
+                style={{ fontSize: "16px", margin: "10px" }}
+                onClick={handleNavItemClick}
+              >
+                HOME
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link
                 to="/topholders"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
               >
-                Top Holders
+                TOP HOLDERS
               </Link>
             </li>
-            
+
             <li className="nav-item">
-              <Link
-                to="/winplay"
+              <a
+                href="https://winplay.winbulk.com/"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
                 onClick={handleNavItemClick}
               >
                 WINPLAY
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
               <Link
-                to="/dappservices"
+                to="/stakingPage"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
                 onClick={handleNavItemClick}
               >
-                DAPP SERVICES
+                WINSTAKE
               </Link>
             </li>
-            
-            
+
+
             {isMobileView && (
               <li className="nav-item">
                 <a
                   href={'https://winbulk.com/doc/whitepaper.pdf'}
-                  target="_blank" 
+                  target="_blank"
                   className="nav-link text-light"
                   style={{ fontSize: "16px", margin: "10px" }}
                   onClick={handleNavItemClick}

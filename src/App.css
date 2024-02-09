@@ -130,9 +130,9 @@ footer {
 .desc {
   width: 100%;
   max-width: 600px;
-  text-align: center;
+  text-align: justify;
   margin: 20px 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .header-action-btn {

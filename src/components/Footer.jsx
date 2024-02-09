@@ -11,7 +11,7 @@ function Footer() {
             <img src={logo} alt="logo" className="img-fluid mb-3" />
             <p>
               Maximize the potential of your cryptocurrency with our exclusive
-              features: WINBULK SALES, WINPLAY, DAPP SERVICES etc. Our
+              features: WINBULK TopHolders, WINPLAY, WINSTAKE etc. Our
               user-friendly platform empowers you to earn lucrative rewards by
               becoming one of the top holders of our tokens. Seize this
               opportunity to optimize your holdings and unlock substantial

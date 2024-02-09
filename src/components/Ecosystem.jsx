@@ -23,11 +23,11 @@ function Ecosystem() {
   }, []);
 
   return (
-    <div className="ecosystem-wrapper">
-      <SimpleBar className="container ecosystem-scroll-container">
+    <div className="ecosystem-wrapper" >
+      <SimpleBar className="container" >
         <h3 className="ecosystem-heading">ECOSYSTEM</h3>
         {showScrollIndicator && (
-          <div className="scroll-indicator left">
+          <div className="">
             <span>&#8249;</span>
           </div>
         )}
@@ -51,7 +51,7 @@ function Ecosystem() {
             </div>
             <div className="util-column">
               <h1 className="util-title">WINPLAY</h1>
-              <StatusBtn status="20% Completed" />
+              <StatusBtn status="80% Completed" />
               <p>
                 Unleash the Power of Chance With WinPlay, users have the ability
                 to create and participate our intuitive WinPlay decentralized
@@ -64,22 +64,7 @@ function Ecosystem() {
                 <button className="launch-button">Launch App</button>
               </Link>
             </div>
-            <div className="util-column">
-              <h1 className="util-title"> DAPP Services</h1>
-              <StatusBtn status="50% Completed" />
-              <p>
-                Our innovative Dapp Services is dedicated to helping individuals
-                and businesses create and enhance their own utilities, while
-                also providing a platform for buying and selling utility
-                services using our exclusive WBUK token. We enable you to
-                harness the power of utility creation.
-              </p>
-              <Link to="/BlockchainServices">
-                {" "}
-                {/* Add the Link component and specify the target route */}
-                <button className="launch-button">Launch App</button>
-              </Link>
-            </div>
+            
             <div className="util-column">
               <h1 className="util-title">WINBULK STAKING</h1>
               <StatusBtn status="50% Completed" />
@@ -95,22 +80,7 @@ function Ecosystem() {
                 <button className="launch-button">Launch App</button>
               </Link>
             </div>
-            <div className="util-column">
-              <h1 className="util-title">WINBULK SWAP</h1>
-              <StatusBtn status="10% Completed" />
-              <p>
-                Win Swap is a revolutionary decentralized exchange (DEX)
-                platform that empowers users to seamlessly trade
-                cryptocurrencies with enhanced security and efficiency. By
-                leveraging blockchain technology, Win Swap eliminates the need
-                for intermediaries, ensuring direct peer-to-peer transactions.
-              </p>
-              <Link to="/SwapPage">
-                {" "}
-                {/* Add the Link component and specify the target route */}
-                <button className="launch-button">Launch App</button>
-              </Link>
-            </div>
+            
           </div>
         </div>
       </SimpleBar>
