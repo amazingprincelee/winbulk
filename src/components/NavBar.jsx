@@ -73,14 +73,16 @@ function NavBar() {
               </a>
             </li>
             <li className="nav-item">
-              <Link
-                to="/stakingPage"
+            <a
+                href="https://winstake.winbulk.com/"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
                 onClick={handleNavItemClick}
               >
                 WINSTAKE
-              </Link>
+              </a>
             </li>
 
 
