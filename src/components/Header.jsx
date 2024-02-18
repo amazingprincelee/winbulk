@@ -48,7 +48,7 @@ function Header() {
                   TOP HOLDERS
                 </button>
                 <button className="action-btn" onClick={handleClick2}>
-                  HOW TO BUY
+                  Get WBUK
                 </button>
                 
               </div>
@@ -69,8 +69,6 @@ function Header() {
             <img src={heroeImage} alt="staking %" />
           </div>
         </div>
-
-        <WinSale />
       </div>
     </div>
   );

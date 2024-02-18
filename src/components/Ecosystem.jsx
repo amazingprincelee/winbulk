@@ -43,42 +43,54 @@ function Ecosystem() {
                 platform guarantees seamless value appreciation and
                 continuous benefits for our investors.
               </p>
+              <a
+                href="https://topholder.winbulk.com/"
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
+              >
+                <button className="launch-button">Launch App</button>
+              </a>
               <Link to="/">
                 {" "}
                 {/* Add the Link component and specify the target route */}
-                <button className="launch-button">Launch App</button>
+                
               </Link>
             </div>
             <div className="util-column">
               <h1 className="util-title">WINPLAY</h1>
-              <StatusBtn status="80% Completed" />
+              <StatusBtn status="100% Completed" />
               <p>
                 Unleash the Power of Chance With WinPlay, users have the ability
                 to create and participate our intuitive WinPlay decentralized
                 application (dApp) system. The process is simple: users can
                 effortlessly create their own game and invite friends,
               </p>
-              <Link to="/LotteryPage">
-                {" "}
-                {/* Add the Link component and specify the target route */}
+              <a
+                href="https://winplay.winbulk.com/"
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
+              >
                 <button className="launch-button">Launch App</button>
-              </Link>
+              </a>
+              
             </div>
             
             <div className="util-column">
-              <h1 className="util-title">WINBULK STAKING</h1>
-              <StatusBtn status="50% Completed" />
+              <h1 className="util-title">WINSTAKE</h1>
+              <StatusBtn status="100% Completed" />
               <p>
                 Win Staking is a cutting-edge platform that allows users to
                 securely lock their cryptocurrency holdings and earn passive
                 income through staking. By participating in the staking process,
                 users contribute to the validation and security of the network.
               </p>
-              <Link to="/StakingPage">
-                {" "}
-                {/* Add the Link component and specify the target route */}
+              <a
+                href="https://winstake.winbulk.com/"
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
+              >
                 <button className="launch-button">Launch App</button>
-              </Link>
+              </a>
             </div>
             
           </div>

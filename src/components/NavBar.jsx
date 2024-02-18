@@ -50,14 +50,16 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/topholders"
+            <a
+                href="https://topholder.winbulk.com/"
                 className="nav-link text-light"
                 style={{ fontSize: "16px", margin: "10px" }}
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
                 onClick={handleNavItemClick}
               >
-                TOP HOLDERS
-              </Link>
+                TOPHOLDER
+              </a>
             </li>
 
             <li className="nav-item">
