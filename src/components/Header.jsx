@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom"; // Import the useHistory hook
 import heroeImage from "../images/winbulk-utils.png";
-import WinSale from "./WinSale";
+
 
 
 function Header() {
@@ -48,7 +48,7 @@ function Header() {
                   TOP HOLDERS
                 </button>
                 <button className="action-btn" onClick={handleClick2}>
-                  Get WBUK
+                  GET WBUK
                 </button>
                 
               </div>

@@ -45,7 +45,7 @@ const Roadmap = () => {
               <li>Introduction of Winbulk Dapp development Services (WDD SERVICES)</li>
               <li>Active Participation in Community Events</li>
               <li>Implementation of Cross-Chain Solutions</li>
-              <li>Dapp Services launch</li>
+              <li>WinDapp launch</li>
             </ul>
           </div>
         </div>
