@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function HowToBuy() {
-  const salesAddress = "0x75148f1e1BFF2D47B1e8b67EfB8aBbFd94366971"; // Replace this with the actual sales address
+  const salesAddress = "0x11Cf71Aa6F96f257dFBA7eC60AbA339322Db9831"; // Replace this with the actual sales address
 
   const [copyStatus, setCopyStatus] = useState("Copy contract address");
   const [currentAccount, setCurrentAccount] = useState("");
@@ -51,7 +51,7 @@ function HowToBuy() {
         <div className="col-lg-6 col-md-12">
             <div className="mt-5"></div>
           <h3>WBUK Available on the TOPHOLDER</h3>
-          <p>The only avenue to acquire WBUK at present is by engaging in either the TopHolder program or any ongoing events hosted on our social media platforms.</p>
+          <p>The only avenue to acquire WBUK for now until WBUK get listed is by engaging in either the TopHolder program or any ongoing events hosted on our social media platforms.</p>
           <h4>To invest in TopHolder, follow these steps:</h4>
           <ul>
             <li>Log into your Wallet (Metamask/TrustWallet)</li>

@@ -19,9 +19,9 @@ const Roadmap = () => {
           <div className="roadmap-item">
           <h2>Stage 2: WinBulk Sales & Expansion</h2>
             <ul>
-              <li>TopHolder <FaCheck /></li>
-              <li>Winplay <FaCheck /></li>
-              <li>Winstake <FaCheck /></li>
+              <li>TopHolder Launch <FaCheck /></li>
+              <li>Winplay Launch<FaCheck /></li>
+              <li>Winstake Launch<FaCheck /></li>
               <li>Pancakeswap Listing</li>
               
               <li>Audit</li>

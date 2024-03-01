@@ -92,6 +92,23 @@ function Ecosystem() {
                 <button className="launch-button">Launch App</button>
               </a>
             </div>
+
+
+            <div className="util-column">
+              <h1 className="util-title">WINDAPP</h1>
+              <StatusBtn status="10% Completed" />
+              <p>
+              WINDAPP is a game-changer for the crypto community, catering to the needs of developers and investors alike. This innovative concept promises to add substantial value to the blockchain world, enhancing the growth and value of dApps.
+              </p>
+              <a
+                href="https://windapp.winbulk.com/"
+                target="_blank"
+                rel="noopener noreferrer" // For security reasons, always include this when using target="_blank"
+              >
+                <button className="launch-button" disabled>Launch App</button>
+
+              </a>
+            </div>
             
           </div>
         </div>
